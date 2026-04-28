@@ -3,12 +3,6 @@
 export default function Viaje() {
   const etapas = [
     {
-      titulo: "A veces no sabes por dónde empezar",
-      texto:
-        "Hay momentos donde todo se siente confuso. No entender lo que te pasa también es parte del proceso.",
-      video: "/videos/mountain.mp4",
-    },
-    {
       titulo: "La mente no se detiene",
       texto:
         "La ansiedad no siempre se ve, pero se siente en cada pensamiento que no descansa.",
