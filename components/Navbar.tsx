@@ -14,9 +14,9 @@ export default function Navbar() {
         <Image
           src="/logo.png"
           alt="Logo Psicóloga"
-          width={36}
-          height={36}
-          className="object-contain opacity-90"
+          width={48}
+height={48}
+className="object-contain opacity-90"
         />
 
         <span className="text-[#4a6741] font-semibold font-serif text-base md:text-lg tracking-wide">
