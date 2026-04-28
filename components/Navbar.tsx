@@ -7,24 +7,22 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-[#fdfcf8]/90 backdrop-blur border-b border-[#e0ddd6] px-6 md:px-10 h-[68px] flex items-center justify-between overflow-visible">
+    <nav className="fixed top-0 w-full z-50 bg-[#fdfcf8]/90 backdrop-blur border-b border-[#e0ddd6] px-4 md:px-8 h-[68px] flex items-center justify-between overflow-visible">
       
       {/* LOGO + NOMBRE */}
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-1">
 
         <Image
           src="/logo.png"
           alt="Logo Psicóloga"
-          width={220}
-          height={220}
+          width={300}
+          height={300}
           className="object-contain relative top-6"
         />
 
-        <div className="leading-tight">
-          <p className="text-green-700 font-serif text-lg md:text-xl font-semibold">
-            Psicóloga Paulina Hernández
-          </p>
-        </div>
+        <span className="text-green-700 font-serif text-lg md:text-xl font-semibold whitespace-nowrap">
+          Psicóloga Paulina Hernández
+        </span>
 
       </div>
 
@@ -64,17 +62,9 @@ export default function Navbar() {
       {open && (
         <div className="absolute top-[68px] left-0 w-full bg-white border-t border-[#e0ddd6] p-6 flex flex-col gap-4 text-sm shadow-md">
           
-          <a href="#servicios" onClick={() => setOpen(false)}>
-            Servicios
-          </a>
-
-          <a href="#sobre" onClick={() => setOpen(false)}>
-            Sobre mí
-          </a>
-
-          <a href="#investigacion" onClick={() => setOpen(false)}>
-            Investigación
-          </a>
+          <a href="#servicios" onClick={() => setOpen(false)}>Servicios</a>
+          <a href="#sobre" onClick={() => setOpen(false)}>Sobre mí</a>
+          <a href="#investigacion" onClick={() => setOpen(false)}>Investigación</a>
 
           <a
             href="#reserva"
