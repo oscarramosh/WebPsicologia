@@ -15,17 +15,14 @@ export default function Navbar() {
         <Image
           src="/logo.png"
           alt="Logo Psicóloga"
-          width={180}
-          height={180}
-          className="object-contain relative top-4"
+          width={220}
+          height={220}
+          className="object-contain relative top-6"
         />
 
         <div className="leading-tight">
-          <p className="text-[#4a6741] font-serif text-base font-semibold">
-            Psicóloga
-          </p>
-          <p className="text-gray-600 text-sm">
-            Paulina Hernández
+          <p className="text-green-700 font-serif text-lg md:text-xl font-semibold">
+            Psicóloga Paulina Hernández
           </p>
         </div>
 
