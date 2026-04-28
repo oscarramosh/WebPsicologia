@@ -5,7 +5,6 @@ import Sobre from "../components/Sobre";
 import Frases from "../components/Frases";
 import Estudios from "../components/Estudios";
 import Reserva from "../components/Reserva";
-import Footer from "../components/Footer";
 import Quote from "../components/Quote";
 import WhatsAppButton from "../components/WhatsAppButton";
 import FloatingCTA from "../components/FloatingCTA";
@@ -23,7 +22,7 @@ export default function Home() {
       <Estudios />
       <Quote />
       <Reserva />
-      <Footer />
+      
       <WhatsAppButton />
       <FloatingCTA />
     </main>
