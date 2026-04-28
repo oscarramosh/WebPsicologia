@@ -9,6 +9,7 @@ import Quote from "../components/Quote";
 import WhatsAppButton from "../components/WhatsAppButton";
 import FloatingCTA from "../components/FloatingCTA";
 import Viaje from "../components/Viaje";
+import Testimonios from "../components/Testimonios";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Frases />
       <Estudios />
       <Quote />
+      <Testimonios />
       <Reserva />
       
       <WhatsAppButton />
