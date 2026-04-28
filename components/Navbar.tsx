@@ -7,10 +7,10 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-[#fdfcf8]/90 backdrop-blur border-b border-[#e0ddd6] pl-2 pr-6 md:pl-4 md:pr-10 h-[68px] flex items-center justify-between overflow-visible">
+    <nav className="fixed top-0 w-full z-50 bg-[#fdfcf8]/90 backdrop-blur border-b border-[#e0ddd6] pl-0 pr-6 md:pl-0 md:pr-10 h-[68px] flex items-center justify-between overflow-visible">
       
       {/* LOGO + NOMBRE */}
-      <div className="flex items-center gap-0 -ml-2">
+      <div className="flex items-center gap-0 -ml-4">
 
         <Image
           src="/logo.png"
@@ -50,22 +50,16 @@ export default function Navbar() {
 
       </div>
 
-      {/* BOTÓN MOBILE */}
-      <button
-        onClick={() => setOpen(!open)}
-        className="md:hidden text-2xl"
-      >
+      {/* MOBILE */}
+      <button onClick={() => setOpen(!open)} className="md:hidden text-2xl">
         ☰
       </button>
 
-      {/* MENÚ MOBILE */}
       {open && (
         <div className="absolute top-[68px] left-0 w-full bg-white border-t border-[#e0ddd6] p-6 flex flex-col gap-4 text-sm shadow-md">
-          
           <a href="#servicios" onClick={() => setOpen(false)}>Servicios</a>
           <a href="#sobre" onClick={() => setOpen(false)}>Sobre mí</a>
           <a href="#investigacion" onClick={() => setOpen(false)}>Investigación</a>
-
           <a
             href="#reserva"
             onClick={() => setOpen(false)}
@@ -73,7 +67,6 @@ export default function Navbar() {
           >
             Reservar
           </a>
-
         </div>
       )}
     </nav>
