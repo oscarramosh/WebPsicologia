@@ -9,15 +9,26 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#fdfcf8]/90 backdrop-blur border-b border-[#e0ddd6] px-6 md:px-10 h-[68px] flex items-center justify-between overflow-visible">
       
-      {/* LOGO */}
-      <div className="flex items-center">
+      {/* LOGO + NOMBRE */}
+      <div className="flex items-center gap-3 pl-2">
+        
         <Image
           src="/logo.png"
           alt="Logo Psicóloga"
-          width={120}
-          height={120}
-          className="object-contain -translate-y-6"
+          width={150}
+          height={150}
+          className="object-contain -translate-y-8"
         />
+
+        <div className="leading-tight">
+          <p className="text-[#4a6741] font-serif text-sm md:text-base font-semibold">
+            Psicóloga
+          </p>
+          <p className="text-gray-600 text-xs md:text-sm">
+            Paulina Hernández
+          </p>
+        </div>
+
       </div>
 
       {/* MENÚ DESKTOP */}
