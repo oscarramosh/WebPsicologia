@@ -7,21 +7,17 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-     <nav className="fixed top-0 w-full z-50 bg-[#fdfcf8]/90 backdrop-blur border-b border-[#e0ddd6] px-6 md:px-10 h-[110px] flex items-center justify-between overflow-visible">
+    <nav className="fixed top-0 w-full z-50 bg-[#fdfcf8]/90 backdrop-blur border-b border-[#e0ddd6] px-6 md:px-10 h-[68px] flex items-center justify-between overflow-visible">
       
-      {/* LOGO + NOMBRE */}
-      <div className="flex items-center gap-3">
-      <Image
-  src="/logo.png"
-  alt="Logo"
-  width={95}
-  height={95}
-  className="object-contain -translate-y-2"
- />
-
-        <span className="text-[#4a6741] font-semibold font-serif text-base md:text-lg tracking-wide">
-          Psicóloga Paulina Hernández
-        </span>
+      {/* LOGO */}
+      <div className="flex items-center">
+        <Image
+          src="/logo.png"
+          alt="Logo Psicóloga"
+          width={120}
+          height={120}
+          className="object-contain -translate-y-6"
+        />
       </div>
 
       {/* MENÚ DESKTOP */}
@@ -41,7 +37,7 @@ export default function Navbar() {
 
         <a
           href="#reserva"
-          className="bg-[#4a6741] text-white px-4 py-2 rounded-md hover:bg-[#6b8f62] transition"
+          className="bg-[#4a6741] text-white px-5 py-2 rounded-md hover:bg-[#6b8f62] transition"
         >
           Reservar
         </a>
@@ -51,7 +47,7 @@ export default function Navbar() {
       {/* BOTÓN MOBILE */}
       <button
         onClick={() => setOpen(!open)}
-        className="md:hidden text-xl"
+        className="md:hidden text-2xl"
       >
         ☰
       </button>
