@@ -1,6 +1,7 @@
 "use client";
 
-import { Instagram, Mail, Phone } from "lucide-react";
+import { Camera, Mail, Phone } from "lucide-react";
+import { FaInstagram } from "react-icons/fa";
 
 export default function Reserva() {
   return (
@@ -121,7 +122,7 @@ export default function Reserva() {
               {/* INSTAGRAM */}
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 rounded-full bg-[#eef2ed] flex items-center justify-center">
-                  <Instagram size={16} className="text-[#6b8f62]" />
+                  <FaInstagram className="text-[#6b8f62] group-hover:scale-110 transition" size={16} />
                 </div>
                 <a
                   href="https://instagram.com/psico.paulinahernandez"
