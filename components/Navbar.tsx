@@ -10,21 +10,21 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full z-50 bg-[#fdfcf8]/90 backdrop-blur border-b border-[#e0ddd6] px-6 md:px-10 h-[68px] flex items-center justify-between overflow-visible">
       
       {/* LOGO + NOMBRE */}
-      <div className="flex items-center gap-3 pl-2">
-        
+      <div className="flex items-center gap-3">
+
         <Image
           src="/logo.png"
           alt="Logo Psicóloga"
-          width={150}
-          height={150}
-          className="object-contain -translate-y-8"
+          width={90}
+          height={90}
+          className="object-contain -translate-y-2"
         />
 
         <div className="leading-tight">
-          <p className="text-[#4a6741] font-serif text-sm md:text-base font-semibold">
+          <p className="text-[#4a6741] font-serif text-sm font-semibold">
             Psicóloga
           </p>
-          <p className="text-gray-600 text-xs md:text-sm">
+          <p className="text-gray-600 text-xs">
             Paulina Hernández
           </p>
         </div>
