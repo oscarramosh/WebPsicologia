@@ -9,7 +9,9 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full z-50 bg-[#fdfcf8]/90 backdrop-blur border-b border-[#e0ddd6] px-10 h-[68px] flex items-center justify-between">
       
       <div className="font-serif text-xl">
-        Paulina <span className="text-green-700 italic">Hernández</span>
+        <span className="text-green-700 font-semibold">
+  Psicóloga Paulina Hernández
+</span>
       </div>
 
       <div className="hidden md:flex gap-8 text-xs uppercase tracking-widest text-gray-500">
