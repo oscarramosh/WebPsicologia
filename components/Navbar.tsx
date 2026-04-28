@@ -7,17 +7,17 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-[#fdfcf8]/90 backdrop-blur border-b border-[#e0ddd6] px-6 md:px-10 h-[80px] flex items-center justify-between overflow-visible">
+     <nav className="fixed top-0 w-full z-50 bg-[#fdfcf8]/90 backdrop-blur border-b border-[#e0ddd6] px-6 md:px-10 h-[110px] flex items-center justify-between overflow-visible">
       
       {/* LOGO + NOMBRE */}
       <div className="flex items-center gap-3">
-       <Image
+      <Image
   src="/logo.png"
   alt="Logo"
-  width={72}
-  height={72}
-  className="object-contain -translate-y-1"
-/>
+  width={95}
+  height={95}
+  className="object-contain -translate-y-2"
+ />
 
         <span className="text-[#4a6741] font-semibold font-serif text-base md:text-lg tracking-wide">
           Psicóloga Paulina Hernández
