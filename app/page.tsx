@@ -11,6 +11,7 @@ import FloatingCTA from "../components/FloatingCTA";
 import Viaje from "../components/Viaje";
 import Testimonios from "../components/Testimonios";
 import BlogPreview from "../components/BlogPreview";
+import FAQ from "../components/FAQ";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Hero />
       <Viaje />
       <Servicios />
+      <FAQ />
       <Sobre />
       <Frases />
       <Estudios />
