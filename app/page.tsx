@@ -26,7 +26,7 @@ export default function Home() {
       <Estudios />
       <Quote />
       <Testimonios />
-      <BlogPreview />
+      
       <Reserva />
       
       <WhatsAppButton />
