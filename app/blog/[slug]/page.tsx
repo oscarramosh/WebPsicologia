@@ -1,12 +1,14 @@
 import { posts } from "../../../lib/posts";
 import Link from "next/link";
 
-export default function Post({ params }: { params: { slug: string } }) {
-  const post = posts.find((p) => p.slug === params.slug);
+export default async function Post({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
 
-  // DEBUG (puedes borrar después)
-  console.log("SLUG:", params.slug);
-  console.log("POST:", post);
+  const post = posts.find((p) => p.slug === slug);
 
   if (!post) {
     return (
@@ -19,7 +21,6 @@ export default function Post({ params }: { params: { slug: string } }) {
 
   return (
     <section className="bg-[#fdfcf8] min-h-screen py-20 px-6 md:px-10">
-
       <div className="max-w-3xl mx-auto">
 
         <Link href="/blog" className="text-sm text-gray-400">
