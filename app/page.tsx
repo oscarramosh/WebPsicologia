@@ -10,6 +10,7 @@ import WhatsAppButton from "../components/WhatsAppButton";
 import FloatingCTA from "../components/FloatingCTA";
 import Viaje from "../components/Viaje";
 import Testimonios from "../components/Testimonios";
+import BlogPreview from "../components/BlogPreview";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <Estudios />
       <Quote />
       <Testimonios />
+      <BlogPreview />
       <Reserva />
       
       <WhatsAppButton />
