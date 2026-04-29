@@ -4,15 +4,11 @@ import Link from "next/link";
 export default function Post({ params }: { params: { slug: string } }) {
   const post = posts.find((p) => p.slug === params.slug);
 
-  // DEBUG (puedes borrar después)
-  console.log("SLUG:", params.slug);
-  console.log("POST:", post);
-
   if (!post) {
     return (
-      <div className="p-20">
-        <h1>Post no encontrado</h1>
-        <Link href="/blog">Volver al blog</Link>
+      <div className="p-10">
+        <Link href="/blog">← Volver</Link>
+        <p>Post no encontrado</p>
       </div>
     );
   }
@@ -22,7 +18,7 @@ export default function Post({ params }: { params: { slug: string } }) {
 
       <div className="max-w-3xl mx-auto">
 
-        <Link href="/blog" className="text-sm text-gray-400">
+        <Link href="/blog" className="text-sm text-gray-400 hover:text-[#6b8f62]">
           ← Volver
         </Link>
 
