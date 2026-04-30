@@ -14,3 +14,9 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
+export const metadata = {
+  metadataBase: new URL("https://larutadeunapsicologa.com"),
+  alternates: {
+    canonical: "/",
+  },
+};
