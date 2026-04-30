@@ -4,30 +4,34 @@ import { useState } from "react";
 import { posts } from "../lib/posts";
 
 export default function FAQ() {
-  const [open, setOpen] = useState<number | null>(0); // uno abierto por defecto
+  const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="py-32 px-6 md:px-10 bg-[#f7f5f0]">
+    <section className="relative py-36 px-6 md:px-10 bg-[#f7f5f0] overflow-hidden">
 
-      <div className="max-w-3xl mx-auto">
+      {/* FONDO SUAVE */}
+      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_center,#4a6741_1px,transparent_1px)] bg-[size:40px_40px]" />
+
+      <div className="max-w-3xl mx-auto relative">
 
         {/* HEADER */}
-        <div className="mb-20 text-center">
-          <p className="uppercase text-xs tracking-[0.3em] text-[#6b8f62] mb-4">
-            Preguntas frecuentes
+        <div className="mb-24 text-center">
+          <p className="uppercase text-[10px] tracking-[0.35em] text-[#6b8f62] mb-5">
+            Espacio terapéutico
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-serif leading-tight mb-6">
-            Un espacio para comprenderte
+          <h2 className="text-4xl md:text-5xl font-serif leading-[1.2] mb-6">
+            Preguntas que suelen aparecer
           </h2>
 
-          <p className="text-gray-500 leading-relaxed">
-            A veces no sabemos por dónde empezar. Estas preguntas pueden ayudarte a dar ese primer paso.
+          <p className="text-gray-500 leading-relaxed max-w-xl mx-auto">
+            A veces no es fácil poner en palabras lo que sentimos.  
+            Este espacio busca acompañarte en ese primer acercamiento.
           </p>
         </div>
 
-        {/* FAQ */}
-        <div className="space-y-10">
+        {/* LISTA */}
+        <div className="space-y-14">
 
           {posts.map((post, index) => {
             const isOpen = open === index;
@@ -40,31 +44,31 @@ export default function FAQ() {
                   onClick={() => setOpen(isOpen ? null : index)}
                   className="w-full text-left"
                 >
-                  <div className="flex items-start gap-4">
+                  <div className="flex items-start gap-5">
 
-                    {/* LÍNEA VISUAL */}
+                    {/* LÍNEA */}
                     <div
-                      className={`w-[2px] mt-2 transition-all ${
-                        isOpen ? "h-16 bg-[#6b8f62]" : "h-6 bg-gray-300"
+                      className={`transition-all duration-500 ${
+                        isOpen
+                          ? "h-20 w-[2px] bg-[#6b8f62]"
+                          : "h-8 w-[2px] bg-gray-300"
                       }`}
                     />
 
-                    <div>
-                      <h3 className="font-serif text-xl md:text-2xl leading-snug">
-                        {post.title}
-                      </h3>
-                    </div>
-
+                    {/* TEXTO */}
+                    <h3 className="font-serif text-2xl md:text-3xl leading-snug tracking-tight">
+                      {post.title}
+                    </h3>
                   </div>
                 </button>
 
                 {/* RESPUESTA */}
                 <div
-                  className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                    isOpen ? "max-h-[600px] mt-6" : "max-h-0"
+                  className={`transition-all duration-700 ease-in-out overflow-hidden ${
+                    isOpen ? "max-h-[700px] mt-8" : "max-h-0"
                   }`}
                 >
-                  <div className="pl-6 ml-[2px] text-gray-600 leading-relaxed space-y-5 text-[17px]">
+                  <div className="pl-7 ml-[2px] text-gray-600 leading-relaxed space-y-6 text-[17px]">
 
                     {post.content.split("\n").map((line, i) => {
                       if (line.trim() === "") return null;
@@ -72,13 +76,13 @@ export default function FAQ() {
                       return <p key={i}>{line}</p>;
                     })}
 
-                    {/* CTA INTEGRADO */}
-                    <div className="pt-4">
+                    {/* CTA SUAVE */}
+                    <div className="pt-6">
                       <a
                         href="/#reserva"
-                        className="text-[#6b8f62] underline text-sm hover:opacity-70 transition"
+                        className="text-[#6b8f62] text-sm tracking-wide hover:opacity-70 transition"
                       >
-                        Agendar una primera conversación →
+                        Iniciar proceso terapéutico →
                       </a>
                     </div>
 
