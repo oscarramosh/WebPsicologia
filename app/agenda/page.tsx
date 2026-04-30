@@ -25,7 +25,7 @@ export default function Agenda() {
 
           <div className="h-[750px]">
             <iframe
-              src="https://calendly.com/TU-USUARIO/tu-evento?background_color=fdfcf8&text_color=4a4a4a&primary_color=4a6741"
+              src="https://calendly.com/psicologa-paulinahernandez/30min?background_color=fdfcf8&text_color=4a4a4a&primary_color=4a6741"
               width="100%"
               height="100%"
               className="border-0"
