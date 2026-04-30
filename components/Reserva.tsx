@@ -24,35 +24,20 @@ export default function Reserva() {
       <div className="grid md:grid-cols-2 gap-16">
 
         {/* 🟢 CALENDARIO INTEGRADO */}
-        <div className="space-y-6">
+       <div className="space-y-6">
 
-          <p className="text-gray-600 leading-relaxed">
-            Elige el horario que mejor se adapte a ti y agenda tu sesión en pocos pasos.
-          </p>
+  <p className="text-gray-600 leading-relaxed">
+    Puedes revisar los horarios disponibles y agendar tu sesión de forma simple y confidencial.
+  </p>
 
-          <div className="bg-white border border-[#e5e3dc] rounded-2xl overflow-hidden shadow-sm">
+  <a
+    href="/agenda"
+    className="inline-block bg-[#4a6741] text-white px-8 py-4 rounded-lg uppercase text-sm tracking-widest hover:bg-[#6b8f62] transition"
+  >
+    Reserva aquí tu sesión
+  </a>
 
-            {/* HEADER */}
-            <div className="px-6 py-4 border-b border-[#e5e3dc] bg-[#f7f5f0]">
-              <p className="text-sm text-gray-500">
-                Horarios disponibles
-              </p>
-            </div>
-
-            {/* CALENDLY */}
-            <div className="h-[700px]">
-              <iframe
-                src="https://calendly.com/TU-USUARIO/tu-evento?background_color=f7f5f0&text_color=4a4a4a&primary_color=4a6741"
-                width="100%"
-                height="100%"
-                className="border-0"
-              />
-            </div>
-
-          </div>
-
-        </div>
-
+</div>
         {/* 🔵 INFO (NO MODIFICADA) */}
         <div className="space-y-6">
 
