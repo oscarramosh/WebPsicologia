@@ -1,56 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
-function CalendlyModal() {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <>
-      {/* BOTÓN */}
-      <button
-        onClick={() => setOpen(true)}
-        className="w-full bg-[#4a6741] text-white py-4 rounded-lg uppercase text-sm tracking-widest hover:bg-[#6b8f62] transition"
-      >
-        Agendar sesión →
-      </button>
-
-      {/* MODAL */}
-      {open && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
-
-          {/* FONDO */}
-          <div
-            className="absolute inset-0 bg-black/40 backdrop-blur-sm"
-            onClick={() => setOpen(false)}
-          />
-
-          {/* CONTENEDOR */}
-          <div className="relative bg-white w-[95%] md:w-[800px] h-[80vh] rounded-2xl shadow-xl overflow-hidden">
-
-            {/* CERRAR */}
-            <button
-              onClick={() => setOpen(false)}
-              className="absolute top-4 right-4 z-10 text-gray-500 hover:text-black"
-            >
-              ✕
-            </button>
-
-            {/* CALENDLY */}
-            <iframe
-              src="https://calendly.com/TU-USUARIO/tu-evento"
-              width="100%"
-              height="100%"
-              className="border-0"
-            />
-
-          </div>
-        </div>
-      )}
-    </>
-  );
-}
-
 export default function Reserva() {
   return (
     <section className="bg-[#f7f5f0] py-24 px-10" id="reserva">
@@ -66,23 +15,45 @@ export default function Reserva() {
         </h2>
 
         <p className="text-gray-500 max-w-xl leading-relaxed">
-          Agenda directamente una sesión según tu disponibilidad.
+          Puedes seleccionar un horario disponible directamente en el calendario.
+          Un espacio confidencial y sin compromiso.
         </p>
       </div>
 
       {/* GRID */}
       <div className="grid md:grid-cols-2 gap-16">
 
-        {/* 🔥 REEMPLAZO AQUÍ */}
-        <div className="space-y-4">
-          <p className="text-gray-600">
-            Selecciona un horario disponible y agenda tu sesión de forma simple y confidencial.
+        {/* 🟢 CALENDARIO INTEGRADO */}
+        <div className="space-y-6">
+
+          <p className="text-gray-600 leading-relaxed">
+            Elige el horario que mejor se adapte a ti y agenda tu sesión en pocos pasos.
           </p>
 
-          <CalendlyModal />
+          <div className="bg-white border border-[#e5e3dc] rounded-2xl overflow-hidden shadow-sm">
+
+            {/* HEADER */}
+            <div className="px-6 py-4 border-b border-[#e5e3dc] bg-[#f7f5f0]">
+              <p className="text-sm text-gray-500">
+                Horarios disponibles
+              </p>
+            </div>
+
+            {/* CALENDLY */}
+            <div className="h-[700px]">
+              <iframe
+                src="https://calendly.com/TU-USUARIO/tu-evento?background_color=f7f5f0&text_color=4a4a4a&primary_color=4a6741"
+                width="100%"
+                height="100%"
+                className="border-0"
+              />
+            </div>
+
+          </div>
+
         </div>
 
-        {/* 👇 TODO ESTO SE MANTIENE IGUAL (NO TOCAR) */}
+        {/* 🔵 INFO (NO MODIFICADA) */}
         <div className="space-y-6">
 
           {/* TARJETA INFO */}
