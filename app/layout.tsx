@@ -8,9 +8,9 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         {children}
+        <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
         <Footer />
       </body>
     </html>
   )
 }
-

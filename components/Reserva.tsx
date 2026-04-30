@@ -1,7 +1,55 @@
 "use client";
 
-import { Camera, Mail, Phone } from "lucide-react";
-import { FaInstagram } from "react-icons/fa";
+import { useState } from "react";
+
+function CalendlyModal() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      {/* BOTÓN */}
+      <button
+        onClick={() => setOpen(true)}
+        className="w-full bg-[#4a6741] text-white py-4 rounded-lg uppercase text-sm tracking-widest hover:bg-[#6b8f62] transition"
+      >
+        Agendar sesión →
+      </button>
+
+      {/* MODAL */}
+      {open && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+
+          {/* FONDO */}
+          <div
+            className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+            onClick={() => setOpen(false)}
+          />
+
+          {/* CONTENEDOR */}
+          <div className="relative bg-white w-[95%] md:w-[800px] h-[80vh] rounded-2xl shadow-xl overflow-hidden">
+
+            {/* CERRAR */}
+            <button
+              onClick={() => setOpen(false)}
+              className="absolute top-4 right-4 z-10 text-gray-500 hover:text-black"
+            >
+              ✕
+            </button>
+
+            {/* CALENDLY */}
+            <iframe
+              src="https://calendly.com/TU-USUARIO/tu-evento"
+              width="100%"
+              height="100%"
+              className="border-0"
+            />
+
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
 
 export default function Reserva() {
   return (
@@ -18,49 +66,23 @@ export default function Reserva() {
         </h2>
 
         <p className="text-gray-500 max-w-xl leading-relaxed">
-          Completa el formulario y me pondré en contacto contigo en menos de 24 horas
-          para confirmar tu sesión.
+          Agenda directamente una sesión según tu disponibilidad.
         </p>
       </div>
 
       {/* GRID */}
       <div className="grid md:grid-cols-2 gap-16">
 
-        {/* FORMULARIO */}
-        <form className="space-y-4">
+        {/* 🔥 REEMPLAZO AQUÍ */}
+        <div className="space-y-4">
+          <p className="text-gray-600">
+            Selecciona un horario disponible y agenda tu sesión de forma simple y confidencial.
+          </p>
 
-          <div className="grid grid-cols-2 gap-4">
-            <input className="p-3 border border-[#e0ddd6] rounded-lg" placeholder="Nombre" />
-            <input className="p-3 border border-[#e0ddd6] rounded-lg" placeholder="Apellido" />
-          </div>
+          <CalendlyModal />
+        </div>
 
-          <input className="w-full p-3 border border-[#e0ddd6] rounded-lg" placeholder="Correo electrónico" />
-
-          <input className="w-full p-3 border border-[#e0ddd6] rounded-lg" placeholder="Teléfono (opcional)" />
-
-          <select className="w-full p-3 border border-[#e0ddd6] rounded-lg">
-            <option>Modalidad de sesión</option>
-            <option>Online</option>
-          </select>
-
-          <select className="w-full p-3 border border-[#e0ddd6] rounded-lg">
-            <option>Motivo de consulta</option>
-            <option>Ansiedad</option>
-            <option>Depresión</option>
-            <option>Duelo</option>
-          </select>
-
-          <textarea
-            className="w-full p-3 border border-[#e0ddd6] rounded-lg"
-            placeholder="Cuéntame un poco de tu situación..."
-          />
-
-          <button className="w-full bg-[#4a6741] text-white py-4 rounded-lg uppercase text-sm tracking-widest hover:bg-[#6b8f62] transition">
-            Solicitar hora →
-          </button>
-        </form>
-
-        {/* INFO */}
+        {/* 👇 TODO ESTO SE MANTIENE IGUAL (NO TOCAR) */}
         <div className="space-y-6">
 
           {/* TARJETA INFO */}
@@ -97,42 +119,10 @@ export default function Reserva() {
               Contacto directo
             </h3>
 
-            <div className="space-y-4 text-sm">
-
-              {/* WHATSAPP */}
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-[#eef2ed] flex items-center justify-center">
-                  <Phone size={16} className="text-[#6b8f62]" />
-                </div>
-                <span className="text-gray-700">
-                  +56 9 81513100
-                </span>
-              </div>
-
-              {/* EMAIL */}
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-[#eef2ed] flex items-center justify-center">
-                  <Mail size={16} className="text-[#6b8f62]" />
-                </div>
-                <span className="text-gray-700">
-                  psicologa.paulinahernandez@gmail.com
-                </span>
-              </div>
-
-              {/* INSTAGRAM */}
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-[#eef2ed] flex items-center justify-center">
-                  <FaInstagram className="text-[#6b8f62] group-hover:scale-110 transition" size={16} />
-                </div>
-                <a
-                  href="https://instagram.com/psico.paulinahernandez"
-                  target="_blank"
-                  className="text-gray-700 hover:text-[#6b8f62] transition"
-                >
-                  @psico.paulinahernandez
-                </a>
-              </div>
-
+            <div className="space-y-2 text-sm">
+              <p>WhatsApp: +56 9 81513100</p>
+              <p>Email: psicologa.paulinahernandez@gmail.com</p>
+              <p>Instagram: @psico.paulinahernandez</p>
             </div>
           </div>
 
