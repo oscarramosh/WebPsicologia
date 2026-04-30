@@ -5,23 +5,26 @@ export default function Hero() {
       <div className="bg-[#6b8f62] text-white flex flex-col justify-center px-16 py-20">
 
         <p className="uppercase tracking-[0.2em] text-xs opacity-60 mb-6">
-          Psicóloga Clínica · Santiago
+          Psicóloga Clínica · Santiago · Online
         </p>
 
+        {/* 🔥 H1 OPTIMIZADO (CLAVE SEO) */}
         <h1 className="text-5xl font-serif leading-tight mb-4">
-          Un espacio para{" "}
+          Psicóloga online en Santiago, Chile
           <span className="italic block text-[#dfe7dc]">
-            sanar y crecer
+            Ansiedad, depresión y bienestar emocional
           </span>
         </h1>
 
+        {/* SUBTEXTO MEJORADO */}
         <p className="italic opacity-80 mb-6">
-          Psicología clínica para adultos
+          Psicología clínica para adultos · Terapia online en Chile
         </p>
 
+        {/* DESCRIPCIÓN MÁS SEO */}
         <p className="max-w-md mb-10 opacity-90">
-          Acompaño procesos terapéuticos con enfoque en bienestar emocional,
-          autoconocimiento y desarrollo personal.
+          Acompaño procesos terapéuticos en ansiedad, depresión y desarrollo personal,
+          ofreciendo un espacio seguro, profesional y confidencial.
         </p>
 
         <div className="flex gap-4">
