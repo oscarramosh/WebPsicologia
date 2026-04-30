@@ -4,82 +4,84 @@ import { useState } from "react";
 import { posts } from "../lib/posts";
 
 export default function FAQ() {
-  const [open, setOpen] = useState<number | null>(null);
+  const [open, setOpen] = useState<number | null>(0); // uno abierto por defecto
 
   return (
     <section className="py-32 px-6 md:px-10 bg-[#f7f5f0]">
 
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-3xl mx-auto">
 
         {/* HEADER */}
-        <div className="mb-20">
-          <p className="uppercase text-xs tracking-[0.25em] text-[#6b8f62] mb-4">
+        <div className="mb-20 text-center">
+          <p className="uppercase text-xs tracking-[0.3em] text-[#6b8f62] mb-4">
             Preguntas frecuentes
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-serif mb-6 leading-tight">
-            Un espacio para entender lo que estás viviendo
+          <h2 className="text-4xl md:text-5xl font-serif leading-tight mb-6">
+            Un espacio para comprenderte
           </h2>
 
-          <p className="text-gray-500 max-w-2xl leading-relaxed">
-            Muchas veces, poner en palabras lo que nos ocurre es el primer paso para comenzar a sanar.
+          <p className="text-gray-500 leading-relaxed">
+            A veces no sabemos por dónde empezar. Estas preguntas pueden ayudarte a dar ese primer paso.
           </p>
         </div>
 
         {/* FAQ */}
-        <div className="space-y-5">
+        <div className="space-y-10">
 
           {posts.map((post, index) => {
             const isOpen = open === index;
 
             return (
-              <div
-                key={post.slug}
-                className={`rounded-2xl border transition-all duration-300 ${
-                  isOpen
-                    ? "bg-white border-[#dcd8cf] shadow-md"
-                    : "bg-white/70 border-[#e5e3dc]"
-                }`}
-              >
+              <div key={post.slug} className="group">
 
                 {/* PREGUNTA */}
                 <button
                   onClick={() => setOpen(isOpen ? null : index)}
-                  className="w-full flex justify-between items-center p-6 text-left"
+                  className="w-full text-left"
                 >
-                  <span className="font-serif text-lg md:text-xl">
-                    {post.title}
-                  </span>
+                  <div className="flex items-start gap-4">
 
-                  <div
-                    className={`w-8 h-8 flex items-center justify-center rounded-full border transition ${
-                      isOpen
-                        ? "bg-[#6b8f62] text-white border-[#6b8f62]"
-                        : "text-gray-400 border-gray-300"
-                    }`}
-                  >
-                    {isOpen ? "−" : "+"}
+                    {/* LÍNEA VISUAL */}
+                    <div
+                      className={`w-[2px] mt-2 transition-all ${
+                        isOpen ? "h-16 bg-[#6b8f62]" : "h-6 bg-gray-300"
+                      }`}
+                    />
+
+                    <div>
+                      <h3 className="font-serif text-xl md:text-2xl leading-snug">
+                        {post.title}
+                      </h3>
+                    </div>
+
                   </div>
                 </button>
 
                 {/* RESPUESTA */}
                 <div
-                  className={`grid transition-all duration-500 ease-in-out ${
-                    isOpen
-                      ? "grid-rows-[1fr] opacity-100"
-                      : "grid-rows-[0fr] opacity-0"
+                  className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                    isOpen ? "max-h-[600px] mt-6" : "max-h-0"
                   }`}
                 >
-                  <div className="overflow-hidden">
-                    <div className="px-6 pb-6 text-gray-600 leading-relaxed space-y-4">
+                  <div className="pl-6 ml-[2px] text-gray-600 leading-relaxed space-y-5 text-[17px]">
 
-                      {post.content.split("\n").map((line, i) => {
-                        if (line.trim() === "") return null;
+                    {post.content.split("\n").map((line, i) => {
+                      if (line.trim() === "") return null;
 
-                        return <p key={i}>{line}</p>;
-                      })}
+                      return <p key={i}>{line}</p>;
+                    })}
 
+                    {/* CTA INTEGRADO */}
+                    <div className="pt-4">
+                      <a
+                        href="/#reserva"
+                        className="text-[#6b8f62] underline text-sm hover:opacity-70 transition"
+                      >
+                        Agendar una primera conversación →
+                      </a>
                     </div>
+
                   </div>
                 </div>
 
