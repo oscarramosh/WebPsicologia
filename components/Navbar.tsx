@@ -31,15 +31,13 @@ export default function Navbar() {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      {/* 🔥 BANNER */}
       <div
         className="h-[120px] flex items-center justify-end px-6 md:px-10"
         style={{
           backgroundImage: "url('/logo-navbar.jpg')",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          backgroundSize: "contain", // 🔥 NO corta la imagen
-          backgroundColor: "#fdfcf8",
+          backgroundPosition: "left center", // 🔥 protege la mariposa
+          backgroundSize: "cover", // 🔥 llena TODO el banner
         }}
       >
         {/* MENÚ DESKTOP */}
