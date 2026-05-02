@@ -6,7 +6,6 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [show, setShow] = useState(true);
 
-  // OCULTAR AL SCROLL
   useEffect(() => {
     let lastScroll = 0;
 
@@ -32,20 +31,21 @@ export default function Navbar() {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      {/* 🔥 FONDO CON LOGO */}
+      {/* 🔥 LOGO COMO FONDO TOTAL */}
       <div
         className="h-[120px] flex items-center justify-end px-6 md:px-10"
         style={{
           backgroundImage: "url('/logo-navbar.jpg')",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "left center",
-          backgroundSize: "contain",
-          backgroundColor: "#fdfcf8",
+          backgroundPosition: "center",
+          backgroundSize: "cover", // 🔥 CLAVE
         }}
       >
+        {/* 🔥 OVERLAY PARA QUE SE VEAN LOS LINKS */}
+        <div className="absolute inset-0 bg-white/70 backdrop-blur-sm"></div>
 
-        {/* MENÚ DESKTOP */}
-        <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-600">
+        {/* CONTENIDO ENCIMA */}
+        <div className="relative z-10 hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-700">
           
           <a href="#servicios" className="hover:text-[#6b8f62] transition">
             Servicios
@@ -71,13 +71,13 @@ export default function Navbar() {
         {/* MOBILE */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-2xl"
+          className="relative z-10 md:hidden text-2xl"
         >
           ☰
         </button>
       </div>
 
-      {/* MENÚ MOBILE */}
+      {/* MOBILE MENU */}
       {open && (
         <div className="md:hidden bg-white border-t border-[#e0ddd6] p-6 flex flex-col gap-4 text-sm shadow-md">
           <a href="#servicios" onClick={() => setOpen(false)}>Servicios</a>
