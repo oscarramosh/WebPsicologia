@@ -13,9 +13,9 @@ export default function Navbar() {
       const currentScroll = window.scrollY;
 
       if (currentScroll > lastScroll && currentScroll > 80) {
-        setShow(false);
+        setShow(false); // baja → oculta
       } else {
-        setShow(true);
+        setShow(true); // sube → muestra
       }
 
       lastScroll = currentScroll;
@@ -31,23 +31,21 @@ export default function Navbar() {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      {/* 🔥 LOGO COMO FONDO TOTAL */}
+      {/* 🔥 LOGO COMO FONDO BIEN ESCALADO */}
       <div
-        className="h-[120px] flex items-center justify-end px-6 md:px-10"
+        className="h-[100px] flex items-center justify-end px-6 md:px-10 relative"
         style={{
           backgroundImage: "url('/logo-navbar.jpg')",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          
-         // backgroundSize: "contain",
-
-backgroundColor: "#fdfcf8",
+          backgroundPosition: "left center",
+          backgroundSize: "auto 100%", // 🔥 CLAVE → evita deformación
+          backgroundColor: "#fdfcf8",
         }}
       >
-        {/* 🔥 OVERLAY PARA QUE SE VEAN LOS LINKS */}
-        <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+        {/* 🔥 OVERLAY SUAVE (NO BORRA EL LOGO) */}
+        <div className="absolute inset-0 bg-white/5"></div>
 
-        {/* CONTENIDO ENCIMA */}
+        {/* MENÚ DESKTOP */}
         <div className="relative z-10 hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-700">
           
           <a href="#servicios" className="hover:text-[#6b8f62] transition">
@@ -80,7 +78,7 @@ backgroundColor: "#fdfcf8",
         </button>
       </div>
 
-      {/* MOBILE MENU */}
+      {/* MENÚ MOBILE */}
       {open && (
         <div className="md:hidden bg-white border-t border-[#e0ddd6] p-6 flex flex-col gap-4 text-sm shadow-md">
           <a href="#servicios" onClick={() => setOpen(false)}>Servicios</a>
