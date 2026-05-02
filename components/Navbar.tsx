@@ -34,13 +34,13 @@ export default function Navbar() {
       {/* BANNER COMPLETO */}
       <div
         className="relative h-[130px] flex items-center justify-end px-6 md:px-10"
-        style={{
-          backgroundImage: "url('/logo-navbar.jpg')",
-          backgroundRepeat: "no-repeat",
-           backgroundPosition: "left center",
-          backgroundSize: "cover", // ocupa todo el ancho correctamente
-         
-        }}
+       style={{
+  backgroundImage: "url('/logo-navbar.jpg')",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center",
+  backgroundSize: "auto 90%", // 🔥 CLAVE → reduce tamaño sin cortar
+  backgroundColor: "#fdfcf8",
+}}
       >
         {/* Overlay muy suave (puedes eliminarlo si quieres 0 transparencia) */}
         <div className="absolute inset-0 bg-white/5 pointer-events-none"></div>
