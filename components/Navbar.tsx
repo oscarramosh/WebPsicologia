@@ -37,8 +37,9 @@ export default function Navbar() {
         style={{
           backgroundImage: "url('/logo-navbar.jpg')",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
+           backgroundPosition: "left center",
           backgroundSize: "cover", // ocupa todo el ancho correctamente
+         
         }}
       >
         {/* Overlay muy suave (puedes eliminarlo si quieres 0 transparencia) */}
