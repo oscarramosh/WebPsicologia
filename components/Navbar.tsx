@@ -38,7 +38,7 @@ export default function Navbar() {
   backgroundImage: "url('/logo-navbar.jpg')",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center",
-  backgroundSize: "auto 90%", // 🔥 CLAVE → reduce tamaño sin cortar
+  backgroundSize: "auto 100%",// 🔥 CLAVE → reduce tamaño sin cortar
   backgroundColor: "#fdfcf8",
 }}
       >
