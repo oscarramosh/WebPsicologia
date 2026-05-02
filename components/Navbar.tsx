@@ -37,9 +37,9 @@ export default function Navbar() {
         style={{
           backgroundImage: "url('/logo-navbar.jpg')",
           backgroundRepeat: "no-repeat",
-          //backgroundPosition: "center",
+          backgroundPosition: "center",
           
-          backgroundSize: "contain",
+         // backgroundSize: "contain",
 
 backgroundColor: "#fdfcf8",
         }}
