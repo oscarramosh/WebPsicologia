@@ -33,12 +33,12 @@ export default function Navbar() {
     >
       <div
         className="h-[120px] flex items-center justify-end px-6 md:px-10"
-        style={{
-          backgroundImage: "url('/logo-navbar.jpg')",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "left center", // 🔥 protege la mariposa
-          backgroundSize: "cover", // 🔥 llena TODO el banner
-        }}
+       style={{
+  backgroundImage: "url('/logo-navbar.jpg')",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center",
+  backgroundSize: "100% 100%", // 🔥 CLAVE → encaja exacto al navbar
+}}
       >
         {/* MENÚ DESKTOP */}
         <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-800">
