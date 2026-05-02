@@ -13,9 +13,9 @@ export default function Navbar() {
       const currentScroll = window.scrollY;
 
       if (currentScroll > lastScroll && currentScroll > 80) {
-        setShow(false);
+        setShow(false); // baja → oculta
       } else {
-        setShow(true);
+        setShow(true); // sube → muestra
       }
 
       lastScroll = currentScroll;
@@ -31,22 +31,21 @@ export default function Navbar() {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      {/* 🔥 FONDO COMPLETO */}
+      {/* BANNER COMPLETO */}
       <div
-        className="h-[110px] flex items-center justify-end px-6 md:px-10 relative"
+        className="relative h-[130px] flex items-center justify-end px-6 md:px-10"
         style={{
           backgroundImage: "url('/logo-navbar.jpg')",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
-          backgroundSize: "cover", // 🔥 CLAVE
+          backgroundSize: "cover", // ocupa todo el ancho correctamente
         }}
       >
-        {/* 🔥 OVERLAY MUY SUAVE */}
-        <div className="absolute inset-0 bg-white/10"></div>
+        {/* Overlay muy suave (puedes eliminarlo si quieres 0 transparencia) */}
+        <div className="absolute inset-0 bg-white/5 pointer-events-none"></div>
 
-        {/* CONTENIDO */}
+        {/* MENÚ DESKTOP */}
         <div className="relative z-10 hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-800">
-          
           <a href="#servicios" className="hover:text-[#6b8f62] transition">
             Servicios
           </a>
@@ -65,24 +64,29 @@ export default function Navbar() {
           >
             Reservar
           </a>
-
         </div>
 
-        {/* MOBILE */}
+        {/* BOTÓN MOBILE */}
         <button
           onClick={() => setOpen(!open)}
-          className="relative z-10 md:hidden text-2xl"
+          className="relative z-10 md:hidden text-2xl text-gray-800"
         >
           ☰
         </button>
       </div>
 
-      {/* MOBILE MENU */}
+      {/* MENÚ MOBILE */}
       {open && (
         <div className="md:hidden bg-white border-t border-[#e0ddd6] p-6 flex flex-col gap-4 text-sm shadow-md">
-          <a href="#servicios" onClick={() => setOpen(false)}>Servicios</a>
-          <a href="#sobre" onClick={() => setOpen(false)}>Sobre mí</a>
-          <a href="#investigacion" onClick={() => setOpen(false)}>Investigación</a>
+          <a href="#servicios" onClick={() => setOpen(false)}>
+            Servicios
+          </a>
+          <a href="#sobre" onClick={() => setOpen(false)}>
+            Sobre mí
+          </a>
+          <a href="#investigacion" onClick={() => setOpen(false)}>
+            Investigación
+          </a>
           <a
             href="#reserva"
             onClick={() => setOpen(false)}
