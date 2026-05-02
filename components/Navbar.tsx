@@ -31,18 +31,17 @@ export default function Navbar() {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div
-        className="h-[120px] flex items-center justify-end px-6 md:px-10"
-       style={{
-  backgroundImage: "url('/logo-navbar.jpg')",
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "center",
-  backgroundSize: "100% auto", // 🔥 CLAVE
-  backgroundColor: "#fdfcf8",
-}}
-      >
+      <div className="relative h-[120px] flex items-center justify-end px-6 md:px-10 bg-[#fdfcf8]">
+
+        {/* 🔥 IMAGEN CORRECTA (NO SE CORTA NI DEFORMA) */}
+        <img
+          src="/logo-navbar.jpg"
+          alt="La Ruta de una Psicóloga"
+          className="absolute inset-0 w-full h-full object-contain"
+        />
+
         {/* MENÚ DESKTOP */}
-        <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-800">
+        <div className="relative z-10 hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-800">
           
           <a href="#servicios" className="hover:text-[#6b8f62] transition">
             Servicios
@@ -67,7 +66,7 @@ export default function Navbar() {
         {/* MOBILE */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-2xl"
+          className="relative z-10 md:hidden text-2xl"
         >
           ☰
         </button>
