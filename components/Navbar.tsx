@@ -1,74 +1,60 @@
-"use client";
-
-import { useState } from "react";
-import Image from "next/image";
-
-export default function Navbar() {
-  const [open, setOpen] = useState(false);
-
+export default function Hero() {
   return (
-    <nav className="fixed top-0 w-full z-50 bg-[#fdfcf8]/90 backdrop-blur border-b border-[#e0ddd6] pl-0 pr-6 md:pl-0 md:pr-10 h-[68px] flex items-center justify-between overflow-visible">
-      
-      {/* LOGO + NOMBRE */}
-      <div className="flex items-center gap-0 -ml-4">
+    <section className="grid md:grid-cols-2 min-h-screen pt-[68px]">
 
-        <Image
-          src="/logo.png"
-          alt="Logo Psicóloga"
-          width={320}
-          height={320}
-          className="object-contain relative top-10"
-        />
+      {/* TEXTO */}
+      <div className="bg-[#f3f7f2] text-[#2c2c2a] flex flex-col justify-center px-16 py-20">
 
-        <span className="text-green-700 font-serif text-lg md:text-xl font-semibold -ml-10 whitespace-nowrap">
-          Psicóloga Paulina Hernández
-        </span>
+        <p className="uppercase tracking-[0.2em] text-xs text-[#6b8f62] mb-6">
+          Psicóloga Clínica · Santiago · Online
+        </p>
 
-      </div>
+        {/* 🔥 H1 SEO (CLAVE) */}
+        <h1 className="text-4xl md:text-5xl font-serif leading-tight mb-6">
+          Psicóloga online en Santiago, Chile
+          <span className="italic block text-[#6b8f62]">
+            Ansiedad, depresión y bienestar emocional
+          </span>
+        </h1>
 
-      {/* MENÚ DESKTOP */}
-      <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-500">
-        
-        <a href="#servicios" className="hover:text-[#6b8f62] transition">
-          Servicios
-        </a>
+        {/* SUBTEXTO */}
+        <p className="max-w-md mb-10 text-gray-600 leading-relaxed">
+          Acompaño procesos terapéuticos con enfoque en bienestar emocional,
+          autoconocimiento y desarrollo personal en un espacio seguro y confidencial.
+        </p>
 
-        <a href="#sobre" className="hover:text-[#6b8f62] transition">
-          Sobre mí
-        </a>
-
-        <a href="#investigacion" className="hover:text-[#6b8f62] transition">
-          Investigación
-        </a>
-
-        <a
-          href="#reserva"
-          className="bg-[#4a6741] text-white px-5 py-2 rounded-md hover:bg-[#6b8f62] transition"
-        >
-          Reservar
-        </a>
-
-      </div>
-
-      {/* MOBILE */}
-      <button onClick={() => setOpen(!open)} className="md:hidden text-2xl">
-        ☰
-      </button>
-
-      {open && (
-        <div className="absolute top-[68px] left-0 w-full bg-white border-t border-[#e0ddd6] p-6 flex flex-col gap-4 text-sm shadow-md">
-          <a href="#servicios" onClick={() => setOpen(false)}>Servicios</a>
-          <a href="#sobre" onClick={() => setOpen(false)}>Sobre mí</a>
-          <a href="#investigacion" onClick={() => setOpen(false)}>Investigación</a>
+        {/* BOTONES */}
+        <div className="flex gap-4">
           <a
             href="#reserva"
-            onClick={() => setOpen(false)}
-            className="bg-[#4a6741] text-white px-4 py-2 rounded text-center"
+            className="bg-[#4a6741] text-white px-6 py-3 rounded-md hover:bg-[#6b8f62] transition"
           >
-            Reservar
+            Agendar sesión
+          </a>
+
+          <a
+            href="#servicios"
+            className="border border-[#4a6741] text-[#4a6741] px-6 py-3 rounded-md hover:bg-[#f3f7f2] transition"
+          >
+            Ver servicios
           </a>
         </div>
-      )}
-    </nav>
+      </div>
+
+      {/* FOTO */}
+      <div className="bg-[#f7f5f0] flex flex-col items-center justify-center gap-6">
+
+        <div className="w-[300px] h-[380px] bg-[#dfe8dc] rounded-2xl shadow-xl flex items-center justify-center">
+          <span className="text-5xl font-serif text-[#4a6741]">P</span>
+        </div>
+
+        <div className="text-center text-sm text-gray-600 space-y-1">
+          <p>Psicóloga Clínica</p>
+          <p>+5 años de experiencia</p>
+          <p>Sesiones online</p>
+        </div>
+
+      </div>
+    </section>
   );
 }
