@@ -13,9 +13,9 @@ export default function Navbar() {
       const currentScroll = window.scrollY;
 
       if (currentScroll > lastScroll && currentScroll > 80) {
-        setShow(false); // baja → oculta
+        setShow(false);
       } else {
-        setShow(true); // sube → muestra
+        setShow(true);
       }
 
       lastScroll = currentScroll;
@@ -31,22 +31,21 @@ export default function Navbar() {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      {/* 🔥 LOGO COMO FONDO BIEN ESCALADO */}
+      {/* 🔥 FONDO COMPLETO */}
       <div
-        className="h-[100px] flex items-center justify-end px-6 md:px-10 relative"
+        className="h-[110px] flex items-center justify-end px-6 md:px-10 relative"
         style={{
           backgroundImage: "url('/logo-navbar.jpg')",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "left center",
-          backgroundSize: "auto 100%", // 🔥 CLAVE → evita deformación
-          backgroundColor: "#fdfcf8",
+          backgroundPosition: "center",
+          backgroundSize: "cover", // 🔥 CLAVE
         }}
       >
-        {/* 🔥 OVERLAY SUAVE (NO BORRA EL LOGO) */}
-        <div className="absolute inset-0 bg-white/5"></div>
+        {/* 🔥 OVERLAY MUY SUAVE */}
+        <div className="absolute inset-0 bg-white/10"></div>
 
-        {/* MENÚ DESKTOP */}
-        <div className="relative z-10 hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-700">
+        {/* CONTENIDO */}
+        <div className="relative z-10 hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-800">
           
           <a href="#servicios" className="hover:text-[#6b8f62] transition">
             Servicios
@@ -78,7 +77,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* MENÚ MOBILE */}
+      {/* MOBILE MENU */}
       {open && (
         <div className="md:hidden bg-white border-t border-[#e0ddd6] p-6 flex flex-col gap-4 text-sm shadow-md">
           <a href="#servicios" onClick={() => setOpen(false)}>Servicios</a>
