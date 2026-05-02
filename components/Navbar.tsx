@@ -38,7 +38,10 @@ export default function Navbar() {
           backgroundImage: "url('/logo-navbar.jpg')",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
-          backgroundSize: "cover", // 🔥 CLAVE
+          
+          backgroundSize: "contain",
+
+backgroundColor: "#fdfcf8",
         }}
       >
         {/* 🔥 OVERLAY PARA QUE SE VEAN LOS LINKS */}
