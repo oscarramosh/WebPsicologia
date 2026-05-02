@@ -31,30 +31,19 @@ export default function Navbar() {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      {/* 🔥 BANNER COMPLETO */}
-      <div className="relative h-[120px] flex items-center px-6 md:px-10 overflow-hidden">
-
-        {/* 🔥 FONDO (LLENA TODO) */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: "url('/logo-navbar.jpg')",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            filter: "blur(2px) brightness(1.05)",
-          }}
-        />
-
-        {/* 🔥 IMAGEN PRINCIPAL (NO SE CORTA) */}
-        <img
-          src="/logo-navbar.jpg"
-          alt="La Ruta de una Psicóloga"
-          className="relative z-10 h-[90%] object-contain"
-        />
-
+      {/* 🔥 BANNER */}
+      <div
+        className="h-[120px] flex items-center justify-end px-6 md:px-10"
+        style={{
+          backgroundImage: "url('/logo-navbar.jpg')",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "contain", // 🔥 NO corta la imagen
+          backgroundColor: "#fdfcf8",
+        }}
+      >
         {/* MENÚ DESKTOP */}
-        <div className="relative z-10 hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-800 ml-auto">
+        <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-800">
           
           <a href="#servicios" className="hover:text-[#6b8f62] transition">
             Servicios
@@ -74,13 +63,12 @@ export default function Navbar() {
           >
             Reservar
           </a>
-
         </div>
 
-        {/* MOBILE BOTÓN */}
+        {/* MOBILE */}
         <button
           onClick={() => setOpen(!open)}
-          className="relative z-10 md:hidden text-2xl ml-auto"
+          className="md:hidden text-2xl"
         >
           ☰
         </button>
