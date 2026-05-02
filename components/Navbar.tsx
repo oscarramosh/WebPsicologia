@@ -37,7 +37,8 @@ export default function Navbar() {
   backgroundImage: "url('/logo-navbar.jpg')",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center",
-  backgroundSize: "100% 100%", // 🔥 CLAVE → encaja exacto al navbar
+  backgroundSize: "100% auto", // 🔥 CLAVE
+  backgroundColor: "#fdfcf8",
 }}
       >
         {/* MENÚ DESKTOP */}
