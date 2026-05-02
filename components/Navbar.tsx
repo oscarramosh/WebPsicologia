@@ -42,7 +42,7 @@ export default function Navbar() {
         }}
       >
         {/* 🔥 OVERLAY PARA QUE SE VEAN LOS LINKS */}
-        <div className="absolute inset-0 bg-white/40 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
 
         {/* CONTENIDO ENCIMA */}
         <div className="relative z-10 hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-700">
