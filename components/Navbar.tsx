@@ -1,13 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [show, setShow] = useState(true);
 
-  // 🔥 OCULTAR NAVBAR AL HACER SCROLL
+  // OCULTAR AL SCROLL
   useEffect(() => {
     let lastScroll = 0;
 
@@ -15,9 +14,9 @@ export default function Navbar() {
       const currentScroll = window.scrollY;
 
       if (currentScroll > lastScroll && currentScroll > 80) {
-        setShow(false); // baja → oculta
+        setShow(false);
       } else {
-        setShow(true); // sube → muestra
+        setShow(true);
       }
 
       lastScroll = currentScroll;
@@ -29,26 +28,24 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 bg-[#fdfcf8]/90 backdrop-blur border-b border-[#e0ddd6] transition-transform duration-300 ${
+      className={`fixed top-0 w-full z-50 transition-transform duration-300 ${
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="h-[90px] flex items-center justify-between px-4 md:px-10">
-
-        {/* 🔥 LOGO FULL */}
-        <div className="flex items-center">
-          <Image
-            src="/logo-navbar.jpg"
-            alt="La Ruta de una Psicóloga"
-            width={260}
-            height={80}
-            className="object-contain h-[70px] w-auto"
-            priority
-          />
-        </div>
+      {/* 🔥 FONDO CON LOGO */}
+      <div
+        className="h-[120px] flex items-center justify-end px-6 md:px-10"
+        style={{
+          backgroundImage: "url('/logo-navbar.jpg')",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "left center",
+          backgroundSize: "contain",
+          backgroundColor: "#fdfcf8",
+        }}
+      >
 
         {/* MENÚ DESKTOP */}
-        <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-500">
+        <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-600">
           
           <a href="#servicios" className="hover:text-[#6b8f62] transition">
             Servicios
