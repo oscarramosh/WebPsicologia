@@ -31,18 +31,18 @@ export default function Navbar() {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      {/* 🔥 ALTURA FIJA Y LIMPIA */}
-      <div className="relative w-full h-[90px] bg-[#fdfcf8] overflow-hidden">
+      {/* 🔥 CONTENEDOR */}
+      <div className="relative w-full h-[90px] bg-[#fdfcf8] flex items-center">
 
-        {/* 🔥 IMAGEN COMPLETA SIN RECORTE */}
+        {/* 🔥 IMAGEN BIEN USADA */}
         <img
           src="/banner-cropped.png"
           alt="La Ruta de una Psicóloga"
-          className="absolute inset-0 w-full h-full object-contain"
+          className="w-full h-full object-cover object-center"
         />
 
         {/* 🔥 MENÚ */}
-        <div className="absolute inset-0 w-full h-full object-contain object-center scale-x-110">
+        <div className="absolute inset-0 flex items-center justify-end px-6 md:px-10">
           <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-800">
             <a href="#servicios">Servicios</a>
             <a href="#sobre">Sobre mí</a>
