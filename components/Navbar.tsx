@@ -32,13 +32,13 @@ export default function Navbar() {
       }`}
     >
       {/* 🔥 ALTURA CONTROLADA */}
-      <div className="relative w-full h-[130px] overflow-hidden bg-[#fdfcf8]">
+      <div className="relative w-full h-[140px] overflow-hidden bg-[#fdfcf8]">
 
-        {/* 🔥 IMAGEN CORRECTA */}
+        {/* 🔥 IMAGEN COMPLETA SIN CORTE */}
         <img
           src="/logo-navbar.jpg"
           alt="La Ruta de una Psicóloga"
-          className="absolute inset-0 w-full h-full object-cover object-left"
+          className="absolute inset-0 w-full h-full object-contain object-center"
         />
 
         {/* MENÚ */}
