@@ -37,7 +37,7 @@ export default function Navbar() {
         <img
           src="/logo-navbar.jpg"
           alt="La Ruta de una Psicóloga"
-         className="absolute inset-0 w-full h-full object-cover object-[20%_center]"
+         className="absolute inset-0 w-full h-full object-cover object-[15%_center]"
         />
 
         {/* 🔥 CAPA SUAVE PARA LEGIBILIDAD */}
