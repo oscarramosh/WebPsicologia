@@ -8,15 +8,19 @@ export default function Navbar() {
 
   useEffect(() => {
     let lastScroll = 0;
+
     const handleScroll = () => {
       const currentScroll = window.scrollY;
+
       if (currentScroll > lastScroll && currentScroll > 80) {
         setShow(false);
       } else {
         setShow(true);
       }
+
       lastScroll = currentScroll;
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -27,22 +31,17 @@ export default function Navbar() {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      {/* 
-        916/1718 = 53.3% — padding-top en % usa el ANCHO como referencia,
-        así el alto siempre es proporcional al ancho de pantalla.
-        Resultado: imagen siempre completa, sin recorte, sin espacio blanco.
-      */}
-      <div
-        className="relative w-full overflow-hidden"
-        style={{ paddingTop: "53.32%" }}
-      >
+      {/* 🔥 ALTURA CONTROLADA */}
+      <div className="relative w-full h-[130px] overflow-hidden bg-[#fdfcf8]">
+
+        {/* 🔥 IMAGEN CORRECTA */}
         <img
           src="/logo-navbar.jpg"
           alt="La Ruta de una Psicóloga"
-          className="absolute inset-0 w-full h-full object-fill"
+          className="absolute inset-0 w-full h-full object-cover object-left"
         />
 
-        {/* MENÚ SUPERPUESTO */}
+        {/* MENÚ */}
         <div className="absolute inset-0 flex items-center justify-end px-6 md:px-10">
           <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-800">
             <a href="#servicios" className="hover:text-[#6b8f62] transition">Servicios</a>
@@ -52,16 +51,27 @@ export default function Navbar() {
               Reservar
             </a>
           </div>
-          <button onClick={() => setOpen(!open)} className="md:hidden text-2xl">☰</button>
+
+          <button
+            onClick={() => setOpen(!open)}
+            className="md:hidden text-2xl"
+          >
+            ☰
+          </button>
         </div>
       </div>
 
+      {/* MOBILE MENU */}
       {open && (
         <div className="md:hidden bg-white border-t border-[#e0ddd6] p-6 flex flex-col gap-4 text-sm shadow-md">
           <a href="#servicios" onClick={() => setOpen(false)}>Servicios</a>
           <a href="#sobre" onClick={() => setOpen(false)}>Sobre mí</a>
           <a href="#investigacion" onClick={() => setOpen(false)}>Investigación</a>
-          <a href="#reserva" onClick={() => setOpen(false)} className="bg-[#4a6741] text-white px-4 py-2 rounded text-center">
+          <a
+            href="#reserva"
+            onClick={() => setOpen(false)}
+            className="bg-[#4a6741] text-white px-4 py-2 rounded text-center"
+          >
             Reservar
           </a>
         </div>
