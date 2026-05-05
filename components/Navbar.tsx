@@ -31,19 +31,17 @@ export default function Navbar() {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="relative w-full h-[130px] overflow-hidden">
+      {/* 🔥 CONTENEDOR CON PROPORCIÓN REAL */}
+      <div className="relative w-full overflow-hidden bg-[#fdfcf8]">
 
-        {/* 🔥 IMAGEN BIEN ENCUADRADA */}
+        {/* 🔥 IMAGEN COMPLETA SIN RECORTE */}
         <img
           src="/logo-navbar.jpg"
           alt="La Ruta de una Psicóloga"
-          className="absolute inset-0 w-full h-full object-cover object-[20%_center]"
+          className="w-full h-auto block"
         />
 
-        {/* 🔥 CAPA SUAVE PARA QUE SE LEAN LOS LINKS */}
-        <div className="absolute inset-0 bg-white/10"></div>
-
-        {/* MENÚ */}
+        {/* MENÚ SOBRE LA IMAGEN */}
         <div className="absolute inset-0 flex items-center justify-end px-6 md:px-10">
           <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-800">
             <a href="#servicios" className="hover:text-[#6b8f62] transition">Servicios</a>
@@ -63,7 +61,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* MOBILE */}
+      {/* MOBILE MENU */}
       {open && (
         <div className="md:hidden bg-white border-t border-[#e0ddd6] p-6 flex flex-col gap-4 text-sm shadow-md">
           <a href="#servicios" onClick={() => setOpen(false)}>Servicios</a>
