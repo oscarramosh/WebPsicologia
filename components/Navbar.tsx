@@ -27,16 +27,16 @@ export default function Navbar() {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="relative w-full">
+      <div className="relative w-full h-[160px] overflow-hidden">
 
-        {/* IMAGEN — define el alto del navbar según su proporción real */}
+        {/* IMAGEN centrada verticalmente, sin comprimir */}
         <img
           src="/logo-navbar.jpg"
           alt="La Ruta de una Psicóloga"
-          className="w-full block"
+          className="absolute left-0 top-1/2 -translate-y-1/2 w-full"
         />
 
-        {/* MENÚ SUPERPUESTO SOBRE LA IMAGEN */}
+        {/* MENÚ SUPERPUESTO */}
         <div className="absolute inset-0 flex items-center justify-end px-6 md:px-10">
           <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-800">
             <a href="#servicios" className="hover:text-[#6b8f62] transition">Servicios</a>
@@ -46,14 +46,10 @@ export default function Navbar() {
               Reservar
             </a>
           </div>
-
-          <button onClick={() => setOpen(!open)} className="md:hidden text-2xl">
-            ☰
-          </button>
+          <button onClick={() => setOpen(!open)} className="md:hidden text-2xl">☰</button>
         </div>
       </div>
 
-      {/* MENÚ MOBILE */}
       {open && (
         <div className="md:hidden bg-white border-t border-[#e0ddd6] p-6 flex flex-col gap-4 text-sm shadow-md">
           <a href="#servicios" onClick={() => setOpen(false)}>Servicios</a>
