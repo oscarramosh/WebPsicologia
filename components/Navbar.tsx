@@ -27,31 +27,30 @@ export default function Navbar() {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div
-        className="relative flex items-center justify-end px-6 md:px-10"
-        style={{
-          backgroundImage: "url('/logo-navbar.jpg')",
-          backgroundSize: "100% 100%",   // estira para llenar exacto sin recortar
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          aspectRatio: "auto",            // respeta proporción original
-          height: "clamp(80px, 12vw, 160px)", // alto dinámico según ancho pantalla
-        }}
-      >
-        {/* MENÚ DESKTOP */}
-        <div className="relative z-10 hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-800">
-          <a href="#servicios" className="hover:text-[#6b8f62] transition">Servicios</a>
-          <a href="#sobre" className="hover:text-[#6b8f62] transition">Sobre mí</a>
-          <a href="#investigacion" className="hover:text-[#6b8f62] transition">Investigación</a>
-          <a href="#reserva" className="bg-[#4a6741] text-white px-5 py-2 rounded-md hover:bg-[#6b8f62] transition">
-            Reservar
-          </a>
-        </div>
+      <div className="relative w-full">
 
-        {/* MOBILE */}
-        <button onClick={() => setOpen(!open)} className="relative z-10 md:hidden text-2xl">
-          ☰
-        </button>
+        {/* IMAGEN — define el alto del navbar según su proporción real */}
+        <img
+          src="/logo-navbar.jpg"
+          alt="La Ruta de una Psicóloga"
+          className="w-full block"
+        />
+
+        {/* MENÚ SUPERPUESTO SOBRE LA IMAGEN */}
+        <div className="absolute inset-0 flex items-center justify-end px-6 md:px-10">
+          <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-800">
+            <a href="#servicios" className="hover:text-[#6b8f62] transition">Servicios</a>
+            <a href="#sobre" className="hover:text-[#6b8f62] transition">Sobre mí</a>
+            <a href="#investigacion" className="hover:text-[#6b8f62] transition">Investigación</a>
+            <a href="#reserva" className="bg-[#4a6741] text-white px-5 py-2 rounded-md hover:bg-[#6b8f62] transition">
+              Reservar
+            </a>
+          </div>
+
+          <button onClick={() => setOpen(!open)} className="md:hidden text-2xl">
+            ☰
+          </button>
+        </div>
       </div>
 
       {/* MENÚ MOBILE */}
