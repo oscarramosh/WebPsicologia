@@ -31,14 +31,14 @@ export default function Navbar() {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      {/* 🔥 NAVBAR LIMPIO */}
-      <div className="relative w-full h-[100px] bg-[#fdfcf8] flex items-center justify-center overflow-hidden">
+      {/* 🔥 ALTURA EXACTA */}
+      <div className="relative w-full h-[90px]">
 
-        {/* 🔥 IMAGEN COMPLETA SIN RECORTE */}
+        {/* 🔥 IMAGEN SIN RECORTE NI ESCALADO */}
         <img
-          src="/banner-cropped.png"
+          src="/banner-navbar-final.png"
           alt="La Ruta de una Psicóloga"
-          className="h-full object-contain"
+          className="w-full h-full block"
         />
 
         {/* 🔥 MENÚ */}
