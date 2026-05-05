@@ -32,7 +32,7 @@ export default function Navbar() {
       }`}
     >
       {/* 🔥 ALTURA CONTROLADA */}
-      <div className="relative w-full h-[200px] overflow-hidden bg-[#fdfcf8]">
+      <div className="relative w-full h-[170px] overflow-hidden bg-[#fdfcf8]">
 
         {/* 🔥 IMAGEN COMPLETA SIN CORTE */}
         <img
