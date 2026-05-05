@@ -31,22 +31,21 @@ export default function Navbar() {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      {/* 🔥 ALTURA CONTROLADA (CLAVE) */}
-      <div className="relative w-full h-[80px] overflow-hidden">
+      {/* 🔥 ALTURA BALANCEADA */}
+      <div className="relative w-full h-[100px] overflow-hidden">
 
-        {/* 🔥 IMAGEN ADAPTADA */}
+        {/* 🔥 IMAGEN MENOS ZOOM (CLAVE) */}
         <img
-          src="/banner-50.png"
+          src="/banner-cropped.png"
           alt="Banner"
-          className="absolute inset-0 w-full h-full object-cover object-[30%_center]"
+          className="absolute inset-0 w-full h-full object-cover scale-[0.85] object-center"
         />
 
         {/* 🔥 OVERLAY SUAVE */}
-        <div className="absolute inset-0 bg-white/20"></div>
+        <div className="absolute inset-0 bg-white/15"></div>
 
         {/* 🔥 MENÚ */}
         <div className="absolute inset-0 flex items-center justify-end px-6 md:px-10">
-
           <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-800">
             <a href="#servicios">Servicios</a>
             <a href="#sobre">Sobre mí</a>
