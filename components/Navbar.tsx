@@ -36,10 +36,10 @@ export default function Navbar() {
 
         {/* 🔥 IMAGEN BIEN ENCUADRADA */}
         <img
-          src="/banner-navbar-final.png"
-          alt="La Ruta de una Psicóloga"
-          className="absolute inset-0 w-full h-full object-cover object-top"
-        />
+  src="/banner-navbar-final.png"
+  alt="La Ruta de una Psicóloga"
+  className="absolute inset-0 w-full h-full object-cover object-[50%_35%]"
+/>
 
         {/* 🔥 OVERLAY SUAVE */}
         <div className="absolute inset-0 bg-white/10"></div>
