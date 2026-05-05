@@ -35,11 +35,10 @@ export default function Navbar() {
       <div className="relative w-full h-[90px] overflow-hidden">
 
         {/* 🔥 IMAGEN AJUSTADA CORRECTAMENTE */}
-        <img
-          src="/banner-cropped.png"
-          alt="La Ruta de una Psicóloga"
-          className="absolute inset-0 w-full h-full object-cover object-[30%_center]"
-        />
+       <img
+  src="/banner-small.png"
+  className="absolute inset-0 w-full h-full object-cover"
+/>
 
         {/* 🔥 CAPA SUAVE PARA LEGIBILIDAD */}
         <div className="absolute inset-0 bg-white/10"></div>
