@@ -31,20 +31,30 @@ export default function Navbar() {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="relative h-[140px] flex items-center justify-end px-6 md:px-10 overflow-hidden">
+      {/* 🔥 BANNER */}
+      <div className="relative h-[140px] flex items-center px-6 md:px-10 overflow-hidden bg-[#fdfcf8]">
 
-        {/* 🔥 IMAGEN COMO BANNER REAL */}
+        {/* 🔥 FONDO (LLENA TODO) */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/logo-navbar.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            opacity: 0.25,
+          }}
+        />
+
+        {/* 🔥 IMAGEN PRINCIPAL (NO SE CORTA) */}
         <img
           src="/logo-navbar.jpg"
           alt="La Ruta de una Psicóloga"
-         className="absolute inset-0 w-full h-full object-cover object-[15%_center]"
+          className="relative z-10 h-[85%] object-contain"
         />
 
-        {/* 🔥 CAPA SUAVE PARA LEGIBILIDAD */}
-        <div className="absolute inset-0 bg-white/10"></div>
-
         {/* MENÚ DESKTOP */}
-        <div className="relative z-10 hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-800">
+        <div className="relative z-10 hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-800 ml-auto">
           
           <a href="#servicios" className="hover:text-[#6b8f62] transition">
             Servicios
@@ -69,7 +79,7 @@ export default function Navbar() {
         {/* MOBILE */}
         <button
           onClick={() => setOpen(!open)}
-          className="relative z-10 md:hidden text-2xl"
+          className="relative z-10 md:hidden text-2xl ml-auto"
         >
           ☰
         </button>
