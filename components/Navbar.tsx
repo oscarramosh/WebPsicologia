@@ -35,12 +35,10 @@ export default function Navbar() {
       <div className="relative w-full overflow-hidden bg-[#fdfcf8]">
 
         {/* 🔥 IMAGEN COMPLETA SIN RECORTE */}
-        <img
-          src="/logo-navbar.jpg"
-          alt="La Ruta de una Psicóloga"
-          className="w-full h-auto block"
-        />
-
+      <img
+  src="/banner-cropped.png"
+  className="absolute inset-0 w-full h-full object-cover"
+/>
         {/* MENÚ SOBRE LA IMAGEN */}
         <div className="absolute inset-0 flex items-center justify-end px-6 md:px-10">
           <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-800">
