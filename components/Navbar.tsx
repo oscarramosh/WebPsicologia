@@ -36,7 +36,7 @@ export default function Navbar() {
 
         {/* 🔥 IMAGEN EXACTA (SIN RECORTE) */}
         <img
-          src="/banner-navbar-120.png" // 👈 usa tu imagen nueva de 120px
+          src="/banner-cropped.png" // 👈 usa tu imagen nueva de 120px
           alt="La Ruta de una Psicóloga"
           className="w-full h-full block"
         />
