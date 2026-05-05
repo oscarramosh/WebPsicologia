@@ -31,7 +31,7 @@ export default function Navbar() {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="relative h-[120px] flex items-center justify-end px-6 md:px-10 overflow-hidden">
+      <div className="relative h-[160px] flex items-center justify-end px-6 md:px-10 overflow-hidden">
 
         {/* 🔥 IMAGEN COMO FONDO REAL */}
         <img
@@ -41,7 +41,7 @@ export default function Navbar() {
         />
 
         {/* 🔥 CAPA SUAVE PARA LEGIBILIDAD (opcional pero PRO) */}
-        <div className="absolute inset-0 bg-white/20"></div>
+        <div className="absolute inset-0 w-full h-full object-cover object-left"></div>
 
         {/* MENÚ DESKTOP */}
         <div className="relative z-10 hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-800">
