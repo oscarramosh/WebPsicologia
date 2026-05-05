@@ -42,7 +42,7 @@ export default function Navbar() {
         />
 
         {/* 🔥 MENÚ */}
-        <div className="absolute inset-0 flex items-center justify-end px-6 md:px-10">
+        <div className="absolute inset-0 w-full h-full object-contain object-center scale-x-110">
           <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-800">
             <a href="#servicios">Servicios</a>
             <a href="#sobre">Sobre mí</a>
