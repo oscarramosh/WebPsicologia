@@ -31,15 +31,17 @@ export default function Navbar() {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      {/* 🔥 BANNER */}
-      <div className="relative h-[150px] flex items-center justify-end px-6 md:px-10 bg-[#fdfcf8] overflow-hidden">
+      <div className="relative h-[140px] flex items-center justify-end px-6 md:px-10 overflow-hidden">
 
-        {/* 🔥 IMAGEN (SIN CORTE NI DEFORMACIÓN) */}
+        {/* 🔥 IMAGEN COMO BANNER REAL */}
         <img
           src="/logo-navbar.jpg"
           alt="La Ruta de una Psicóloga"
-          className="absolute inset-0 w-full h-full object-contain object-left"
+          className="absolute inset-0 w-full h-full object-cover object-left"
         />
+
+        {/* 🔥 CAPA SUAVE PARA LEGIBILIDAD */}
+        <div className="absolute inset-0 bg-white/10"></div>
 
         {/* MENÚ DESKTOP */}
         <div className="relative z-10 hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-800">
