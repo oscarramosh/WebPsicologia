@@ -27,13 +27,19 @@ export default function Navbar() {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="relative w-full h-[160px] overflow-hidden">
-
-        {/* IMAGEN centrada verticalmente, sin comprimir */}
+      {/* 
+        916/1718 = 53.3% — padding-top en % usa el ANCHO como referencia,
+        así el alto siempre es proporcional al ancho de pantalla.
+        Resultado: imagen siempre completa, sin recorte, sin espacio blanco.
+      */}
+      <div
+        className="relative w-full overflow-hidden"
+        style={{ paddingTop: "53.32%" }}
+      >
         <img
           src="/logo-navbar.jpg"
           alt="La Ruta de una Psicóloga"
-          className="absolute left-0 top-1/2 -translate-y-1/2 w-full"
+          className="absolute inset-0 w-full h-full object-fill"
         />
 
         {/* MENÚ SUPERPUESTO */}
