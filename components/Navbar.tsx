@@ -36,7 +36,7 @@ export default function Navbar() {
 
         {/* 🔥 IMAGEN DEFINE EL TAMAÑO */}
         <img
-          src="/banner-small.png"
+          src="/banner-50.png"
           alt="La Ruta de una Psicóloga"
           className="w-full h-auto block"
         />
