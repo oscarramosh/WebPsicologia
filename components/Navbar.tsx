@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [show, setShow] = useState(true);
 
   useEffect(() => {
@@ -12,11 +13,15 @@ export default function Navbar() {
     const handleScroll = () => {
       const currentScroll = window.scrollY;
 
+      // ocultar al bajar
       if (currentScroll > lastScroll && currentScroll > 80) {
         setShow(false);
       } else {
         setShow(true);
       }
+
+      // fondo al hacer scroll
+      setScrolled(currentScroll > 20);
 
       lastScroll = currentScroll;
     };
@@ -27,47 +32,72 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-transform duration-300 ${
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         show ? "translate-y-0" : "-translate-y-full"
+      } ${
+        scrolled
+          ? "bg-white/80 backdrop-blur-md shadow-sm"
+          : "bg-transparent"
       }`}
     >
-      {/* 🔥 ALTURA EXACTA DE LA IMAGEN */}
-      <div className="relative w-full h-[120px]">
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
 
-        {/* 🔥 IMAGEN SIN ESCALADO NI RECORTE */}
-        <img
-          src="/banner-cropped.png"
-          alt="La Ruta de una Psicóloga"
-          className="w-full h-full block"
-        />
-
-        {/* 🔥 MENÚ */}
-        <div className="absolute inset-0 flex items-center justify-end px-6 md:px-10">
-          <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-gray-800">
-            <a href="#servicios">Servicios</a>
-            <a href="#sobre">Sobre mí</a>
-            <a href="#investigacion">Investigación</a>
-           
-          </div>
-
-          <button
-            onClick={() => setOpen(!open)}
-            className="md:hidden text-2xl"
-          >
-            ☰
-          </button>
+        {/* LOGO */}
+        <div className="font-serif text-lg text-[#2F3A3F]">
+          La Ruta
         </div>
-      </div>
 
-      {/* MOBILE */}
-      {open && (
-        <div className="md:hidden bg-white border-t p-6 flex flex-col gap-4 text-sm shadow-md">
-          <a onClick={() => setOpen(false)}>Servicios</a>
-          <a onClick={() => setOpen(false)}>Sobre mí</a>
-          <a onClick={() => setOpen(false)}>Investigación</a>
-          <a className="bg-[#4a6741] text-white px-4 py-2 rounded text-center">
+        {/* DESKTOP MENU */}
+        <div className="hidden md:flex items-center gap-8 text-sm text-gray-700">
+
+          <a href="#servicios" className="hover:text-[#3E5C50] transition">
+            Servicios
+          </a>
+
+          <a href="#sobre" className="hover:text-[#3E5C50] transition">
+            Sobre mí
+          </a>
+
+          <a href="#faq" className="hover:text-[#3E5C50] transition">
+            Preguntas
+          </a>
+
+          {/* CTA */}
+          <a
+            href="#reserva"
+            className="bg-[#3E5C50] text-white px-5 py-2 rounded-md hover:bg-[#2F3A3F] transition"
+          >
             Reservar
           </a>
+
+        </div>
+
+        {/* MOBILE */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden text-2xl"
+        >
+          ☰
+        </button>
+
+      </div>
+
+      {/* MOBILE MENU */}
+      {open && (
+        <div className="md:hidden bg-white border-t p-6 flex flex-col gap-4 text-sm shadow-md">
+
+          <a href="#servicios" onClick={() => setOpen(false)}>Servicios</a>
+          <a href="#sobre" onClick={() => setOpen(false)}>Sobre mí</a>
+          <a href="#faq" onClick={() => setOpen(false)}>Preguntas</a>
+
+          <a
+            href="#reserva"
+            onClick={() => setOpen(false)}
+            className="bg-[#3E5C50] text-white px-4 py-2 rounded text-center"
+          >
+            Reservar sesión
+          </a>
+
         </div>
       )}
     </nav>
