@@ -4,19 +4,19 @@ import { useState } from "react";
 import { posts } from "../lib/posts";
 
 export default function FAQ() {
-  const [open, setOpen] = useState<number | null>(0);
+  const [open, setOpen] = useState<number | null>(null); // 🔥 FIX
 
   return (
     <section className="relative py-36 px-6 md:px-10 bg-[#f7f5f0] overflow-hidden">
 
       {/* FONDO SUAVE */}
-      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_center,#4a6741_1px,transparent_1px)] bg-[size:40px_40px]" />
+      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_center,#3E5C50_1px,transparent_1px)] bg-[size:40px_40px]" />
 
       <div className="max-w-3xl mx-auto relative">
 
         {/* HEADER */}
         <div className="mb-24 text-center">
-          <p className="uppercase text-[10px] tracking-[0.35em] text-[#6b8f62] mb-5">
+          <p className="uppercase text-[10px] tracking-[0.35em] text-[#3E5C50] mb-5">
             Espacio terapéutico
           </p>
 
@@ -50,7 +50,7 @@ export default function FAQ() {
                     <div
                       className={`transition-all duration-500 ${
                         isOpen
-                          ? "h-20 w-[2px] bg-[#6b8f62]"
+                          ? "h-20 w-[2px] bg-[#3E5C50]"
                           : "h-8 w-[2px] bg-gray-300"
                       }`}
                     />
@@ -72,7 +72,6 @@ export default function FAQ() {
 
                     {post.content.split("\n").map((line, i) => {
                       if (line.trim() === "") return null;
-
                       return <p key={i}>{line}</p>;
                     })}
 
@@ -80,7 +79,7 @@ export default function FAQ() {
                     <div className="pt-6">
                       <a
                         href="/#reserva"
-                        className="text-[#6b8f62] text-sm tracking-wide hover:opacity-70 transition"
+                        className="text-[#3E5C50] text-sm tracking-wide hover:opacity-70 transition"
                       >
                         Iniciar proceso terapéutico →
                       </a>
