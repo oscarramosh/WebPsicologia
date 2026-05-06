@@ -4,47 +4,48 @@ import { FaWhatsapp, FaEnvelope, FaInstagram } from "react-icons/fa";
 
 export default function Reserva() {
   return (
-    <section className="bg-[#f7f5f0] py-20 px-6 md:px-10" id="reserva">
+    <section className="bg-[#f7f5f0] py-16 px-6 md:px-10" id="reserva">
 
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-5xl mx-auto">
 
         {/* HEADER */}
-        <div className="mb-10">
+        <div className="mb-8">
           <p className="uppercase text-xs tracking-[0.2em] text-[#6b8f62] mb-2">
             Agenda tu hora
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-serif mb-3">
+          <h2 className="text-3xl md:text-4xl font-serif mb-3 leading-tight">
             Da el primer <span className="italic text-[#6b8f62]">paso</span>
           </h2>
 
-          <p className="text-gray-500 max-w-xl leading-relaxed">
+          <p className="text-gray-500 max-w-lg leading-relaxed text-sm">
             Puedes seleccionar un horario disponible directamente en el calendario.
             Un espacio confidencial y sin compromiso.
           </p>
         </div>
 
         {/* GRID */}
-        <div className="grid md:grid-cols-2 gap-10 items-start">
+        <div className="grid md:grid-cols-2 gap-8 items-start">
 
-          {/* 🟢 RESERVA (MÁS COMPACTA) */}
-          <div className="space-y-4 max-w-md">
-            <p className="text-gray-600 leading-relaxed">
+          {/* 🟢 RESERVA */}
+          <div className="space-y-4 max-w-sm">
+            <p className="text-gray-600 text-sm">
               Revisa disponibilidad y agenda tu sesión de forma simple.
             </p>
 
             <a
               href="/agenda"
-              className="inline-block bg-[#4a6741] text-white px-6 py-3 rounded-lg uppercase text-xs tracking-widest hover:bg-[#6b8f62] transition"
+              className="inline-block bg-[#4a6741] text-white px-5 py-3 rounded-lg text-xs tracking-widest hover:bg-[#6b8f62] transition"
             >
-              Reservar sesión
+              RESERVAR SESIÓN
             </a>
           </div>
 
-          {/* 🔵 CONTACTO (SUBIDO) */}
-          <div className="flex items-start">
+          {/* 🔵 CONTACTO (ALINEADO ARRIBA) */}
+          <div className="flex justify-start md:justify-end">
 
-            <div className="bg-white border border-[#e5e3dc] rounded-xl p-5 shadow-sm w-full max-w-sm">
+            <div className="bg-white border border-[#e5e3dc] rounded-xl p-5 shadow-sm w-full max-w-xs -mt-2">
+              
               <h3 className="font-serif text-lg mb-4">
                 Contacto directo
               </h3>
