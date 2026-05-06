@@ -41,7 +41,7 @@ export default function Navbar() {
         />
 
         {/* OVERLAY SUAVE (CLAVE) */}
-        <div className="absolute inset-0 bg-white/25"></div>
+        <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
 
         {/* MENÚ */}
         <div className="absolute inset-0 flex items-center justify-end px-6 md:px-10">
