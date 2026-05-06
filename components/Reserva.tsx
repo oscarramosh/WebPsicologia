@@ -41,33 +41,7 @@ export default function Reserva() {
         {/* 🔵 INFO (NO MODIFICADA) */}
         <div className="space-y-6">
 
-          {/* TARJETA INFO */}
-          <div className="bg-white border border-[#e5e3dc] rounded-xl p-6 shadow-sm">
-            <h3 className="font-serif text-xl mb-5">
-              Información de sesiones
-            </h3>
-
-            <div className="space-y-3 text-sm">
-              <div className="flex justify-between">
-                <span className="text-gray-500">Duración</span>
-                <span>50 minutos</span>
-              </div>
-
-              <div className="flex justify-between">
-                <span className="text-gray-500">Modalidad</span>
-                <span>Online</span>
-              </div>
-
-              <div className="flex justify-between">
-                <span className="text-gray-500">Respuesta</span>
-                <span>24 horas</span>
-              </div>
-            </div>
-
-            <p className="text-xs text-gray-400 mt-4">
-              Toda la información es confidencial.
-            </p>
-          </div>
+         
 
           {/* TARJETA CONTACTO */}
           <div className="bg-white border border-[#e5e3dc] rounded-xl p-6 shadow-sm">

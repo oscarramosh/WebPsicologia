@@ -58,6 +58,10 @@ export default function Hero() {
         {/* INFO PROFESIONAL */}
       {/* INFO PROFESIONAL */}
 <div className="text-center text-sm text-gray-600 space-y-2 max-w-[300px]">
+  <h2 className="text-4xl font-serif mb-4">
+          Hola, soy <span className="italic text-green-700">Paulina</span>
+        </h2>
+  
   <p>
     {/* 👇 pega aquí el texto de Sobre.tsx */}
     Soy psicóloga clínica con experiencia en acompañar procesos de bienestar emocional, 
