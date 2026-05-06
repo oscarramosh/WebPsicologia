@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="grid md:grid-cols-2 min-h-screen pt-[68px]">
+    <section className="grid md:grid-cols-2 min-h-screen pt-[120px] -mt-[120px]">
 
       {/* IZQUIERDA */}
       <div className="bg-[#2F3A3F] text-white flex flex-col justify-center px-10 md:px-16 py-16">
@@ -21,9 +21,8 @@ export default function Hero() {
           donde puedes comprender lo que te ocurre y avanzar a tu propio ritmo.
         </p>
 
-        {/* 🔥 CTA FUERTE */}
+        {/* CTA */}
         <div className="flex flex-col sm:flex-row gap-4">
-
           <a
             href="#reserva"
             className="bg-[#3E5C50] text-white px-6 py-3 rounded-md text-sm tracking-wide hover:bg-[#2F3A3F] transition"
@@ -37,10 +36,9 @@ export default function Hero() {
           >
             Ver servicios
           </a>
-
         </div>
 
-        {/* 🔥 MICROCOPY (MUY IMPORTANTE) */}
+        {/* MICROCOPY */}
         <p className="text-xs opacity-60 mt-4">
           Primera sesión online · Confidencial · Respuesta en menos de 24h
         </p>
