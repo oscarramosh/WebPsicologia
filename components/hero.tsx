@@ -49,7 +49,7 @@ export default function Hero() {
         {/* FOTO */}
         <div className="w-[300px] h-[380px] rounded-2xl shadow-xl overflow-hidden">
   <img
-    src="/pauli.png"
+    src="/pauli.jpeg"
     alt="Psicóloga Paulina Hernández"
     className="w-full h-full object-cover"
   />
