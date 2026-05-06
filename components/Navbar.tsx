@@ -33,18 +33,15 @@ export default function Navbar() {
     >
       <div className="relative w-full h-[120px]">
 
-        {/* IMAGEN */}
+        {/* IMAGEN (SIN CAMBIOS) */}
         <img
           src="/banner-cropped.png"
           alt="La Ruta de una Psicóloga"
           className="w-full h-full block opacity-75"
         />
 
-        {/* OVERLAY SUAVE */}
+        {/* OVERLAY SUAVE (CLAVE) */}
         <div className="absolute inset-0 bg-white/25"></div>
-
-        {/* 🔥 DIFUMINADO CORREGIDO */}
-        <div className="absolute bottom-0 left-0 w-full h-28 bg-gradient-to-b from-transparent via-[#F7F5F0]/40 to-[#F7F5F0]/80 pointer-events-none"></div>
 
         {/* MENÚ */}
         <div className="absolute inset-0 flex items-center justify-end px-6 md:px-10">
