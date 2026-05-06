@@ -1,6 +1,9 @@
 export default function Hero() {
   return (
-    <section className="grid md:grid-cols-2 min-h-screen pt-[120px]">
+    <section className="relative grid md:grid-cols-2 min-h-screen pt-[120px]">
+
+      {/* 🔥 DIFUMINADO SUPERIOR (CLAVE) */}
+      <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-[#2F3A3F]/40 to-transparent pointer-events-none"></div>
 
       {/* IZQUIERDA */}
       <div className="bg-[#2F3A3F] text-white flex flex-col justify-center px-10 md:px-16 py-16">

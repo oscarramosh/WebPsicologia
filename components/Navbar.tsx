@@ -33,19 +33,19 @@ export default function Navbar() {
     >
       <div className="relative w-full h-[120px]">
 
-        {/* IMAGEN (SIN CAMBIOS) */}
+        {/* IMAGEN MÁS NÍTIDA */}
         <img
           src="/banner-cropped.png"
           alt="La Ruta de una Psicóloga"
-          className="w-full h-full block opacity-75"
+          className="w-full h-full block opacity-85"
         />
 
-        {/* OVERLAY SUAVE (CLAVE) */}
-        <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+        {/* OVERLAY SUAVE (NO LAVA LA IMAGEN) */}
+        <div className="absolute inset-0 bg-white/15"></div>
 
         {/* MENÚ */}
         <div className="absolute inset-0 flex items-center justify-end px-6 md:px-10">
-          <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
+          <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
             
             <a href="#servicios" className="hover:text-[#EAEAEA] transition">
               Servicios
@@ -63,7 +63,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden text-2xl text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"
+            className="md:hidden text-2xl text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]"
           >
             ☰
           </button>
