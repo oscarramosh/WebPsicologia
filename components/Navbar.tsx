@@ -33,40 +33,47 @@ export default function Navbar() {
     >
       <div className="relative w-full h-[120px]">
 
-        {/* ✅ IMAGEN ORIGINAL (SIN RECORTE) */}
+        {/* IMAGEN */}
         <img
           src="/banner-cropped.png"
           alt="La Ruta de una Psicóloga"
           className="w-full h-full block opacity-75"
         />
 
-        {/* ✅ OVERLAY SUAVE */}
+        {/* OVERLAY */}
         <div className="absolute inset-0 bg-white/25"></div>
 
         {/* MENÚ */}
         <div className="absolute inset-0 flex items-center justify-end px-6 md:px-10">
-          <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-[#2F3A3F]">
-            <a href="#servicios" className="hover:text-[#3E5C50] transition">
+          
+          {/* 🔥 CAMBIO AQUÍ */}
+          <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
+            
+            <a href="#servicios" className="hover:text-[#EAEAEA] transition">
               Servicios
             </a>
-            <a href="#sobre" className="hover:text-[#3E5C50] transition">
+
+            <a href="#sobre" className="hover:text-[#EAEAEA] transition">
               Sobre mí
             </a>
-            <a href="#investigacion" className="hover:text-[#3E5C50] transition">
+
+            <a href="#investigacion" className="hover:text-[#EAEAEA] transition">
               Investigación
             </a>
+
           </div>
 
+          {/* MOBILE */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden text-2xl text-[#2F3A3F]"
+            className="md:hidden text-2xl text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"
           >
             ☰
           </button>
         </div>
       </div>
 
-      {/* MOBILE */}
+      {/* MOBILE MENU */}
       {open && (
         <div className="md:hidden bg-white border-t p-6 flex flex-col gap-4 text-sm shadow-md">
           <a onClick={() => setOpen(false)}>Servicios</a>
