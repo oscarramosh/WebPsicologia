@@ -43,10 +43,11 @@ export default function Navbar() {
         {/* OVERLAY */}
         <div className="absolute inset-0 bg-white/25"></div>
 
+        {/* 🔥 DIFUMINADO (CLAVE) */}
+        <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-b from-transparent to-[#F7F5F0] pointer-events-none"></div>
+
         {/* MENÚ */}
         <div className="absolute inset-0 flex items-center justify-end px-6 md:px-10">
-          
-          {/* 🔥 CAMBIO AQUÍ */}
           <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
             
             <a href="#servicios" className="hover:text-[#EAEAEA] transition">
@@ -63,7 +64,6 @@ export default function Navbar() {
 
           </div>
 
-          {/* MOBILE */}
           <button
             onClick={() => setOpen(!open)}
             className="md:hidden text-2xl text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"
@@ -73,7 +73,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* MOBILE MENU */}
+      {/* MOBILE */}
       {open && (
         <div className="md:hidden bg-white border-t p-6 flex flex-col gap-4 text-sm shadow-md">
           <a onClick={() => setOpen(false)}>Servicios</a>
