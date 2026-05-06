@@ -21,14 +21,11 @@ export default function Home() {
       <Viaje />
       <Servicios />
       <FAQ />
-      <Sobre />
       <Frases />
       <Estudios />
       <Quote />
       <Testimonios />
-      
       <Reserva />
-      
       <WhatsAppButton />
       <FloatingCTA />
     </main>

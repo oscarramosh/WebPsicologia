@@ -56,11 +56,14 @@ export default function Hero() {
 </div>
 
         {/* INFO PROFESIONAL */}
-        <div className="text-center text-sm text-gray-600 space-y-1">
-          <p>Psicóloga Clínica</p>
-          <p>+5 años de experiencia clínica</p>
-          <p>Sesiones presenciales y online</p>
-        </div>
+      {/* INFO PROFESIONAL */}
+<div className="text-center text-sm text-gray-600 space-y-2 max-w-[300px]">
+  <p>
+    {/* 👇 pega aquí el texto de Sobre.tsx */}
+    Soy psicóloga clínica con experiencia en acompañar procesos de bienestar emocional, 
+    ansiedad y desarrollo personal. Trabajo desde una mirada cercana, ética y profesional.
+  </p>
+</div>
 
       </div>
     </section>
