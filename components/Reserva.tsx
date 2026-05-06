@@ -4,17 +4,17 @@ import { FaWhatsapp, FaEnvelope, FaInstagram } from "react-icons/fa";
 
 export default function Reserva() {
   return (
-    <section className="bg-[#f7f5f0] py-24 px-6 md:px-10" id="reserva">
+    <section className="bg-[#f7f5f0] py-20 px-6 md:px-10" id="reserva">
 
       <div className="max-w-6xl mx-auto">
 
         {/* HEADER */}
-        <div className="mb-14">
-          <p className="uppercase text-xs tracking-[0.2em] text-[#6b8f62] mb-3">
+        <div className="mb-10">
+          <p className="uppercase text-xs tracking-[0.2em] text-[#6b8f62] mb-2">
             Agenda tu hora
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-serif mb-4">
+          <h2 className="text-4xl md:text-5xl font-serif mb-3">
             Da el primer <span className="italic text-[#6b8f62]">paso</span>
           </h2>
 
@@ -25,62 +25,61 @@ export default function Reserva() {
         </div>
 
         {/* GRID */}
-        <div className="grid md:grid-cols-2 gap-16 items-start">
+        <div className="grid md:grid-cols-2 gap-10 items-start">
 
-          {/* 🟢 RESERVA */}
-          <div className="space-y-6">
+          {/* 🟢 RESERVA (MÁS COMPACTA) */}
+          <div className="space-y-4 max-w-md">
             <p className="text-gray-600 leading-relaxed">
-              Puedes revisar los horarios disponibles y agendar tu sesión de forma simple y confidencial.
+              Revisa disponibilidad y agenda tu sesión de forma simple.
             </p>
 
             <a
               href="/agenda"
-              className="inline-block bg-[#4a6741] text-white px-8 py-4 rounded-lg uppercase text-sm tracking-widest hover:bg-[#6b8f62] transition"
+              className="inline-block bg-[#4a6741] text-white px-6 py-3 rounded-lg uppercase text-xs tracking-widest hover:bg-[#6b8f62] transition"
             >
-              Reserva aquí tu sesión
+              Reservar sesión
             </a>
           </div>
 
-          {/* 🔵 CONTACTO */}
-          <div className="space-y-6">
-            <div className="bg-white border border-[#e5e3dc] rounded-xl p-6 shadow-sm">
-              <h3 className="font-serif text-xl mb-5">
+          {/* 🔵 CONTACTO (SUBIDO) */}
+          <div className="flex items-start">
+
+            <div className="bg-white border border-[#e5e3dc] rounded-xl p-5 shadow-sm w-full max-w-sm">
+              <h3 className="font-serif text-lg mb-4">
                 Contacto directo
               </h3>
 
-              <div className="space-y-4 text-sm">
+              <div className="space-y-3 text-sm">
 
-                {/* WHATSAPP */}
                 <a
-                  href="https://wa.me/56981513100"
+                  href="https://wa.me/56981513100?text=Hola%20quiero%20agendar%20una%20sesión"
                   target="_blank"
                   className="flex items-center gap-3 hover:text-[#6b8f62] transition"
                 >
-                  <FaWhatsapp className="text-green-600 text-lg" />
+                  <FaWhatsapp className="text-green-600 text-base" />
                   <span>+56 9 81513100</span>
                 </a>
 
-                {/* EMAIL */}
                 <a
                   href="mailto:psicologa.paulinahernandez@gmail.com"
                   className="flex items-center gap-3 hover:text-[#6b8f62] transition"
                 >
-                  <FaEnvelope className="text-gray-600 text-lg" />
-                  <span>psicologa.paulinahernandez@gmail.com</span>
+                  <FaEnvelope className="text-gray-600 text-base" />
+                  <span>Email</span>
                 </a>
 
-                {/* INSTAGRAM */}
                 <a
                   href="https://instagram.com/psico.paulinahernandez"
                   target="_blank"
                   className="flex items-center gap-3 hover:text-[#6b8f62] transition"
                 >
-                  <FaInstagram className="text-pink-500 text-lg" />
-                  <span>@psico.paulinahernandez</span>
+                  <FaInstagram className="text-pink-500 text-base" />
+                  <span>Instagram</span>
                 </a>
 
               </div>
             </div>
+
           </div>
 
         </div>
