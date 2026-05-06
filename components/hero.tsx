@@ -47,9 +47,13 @@ export default function Hero() {
       <div className="bg-[#f7f5f0] flex flex-col items-center justify-center gap-6">
 
         {/* FOTO */}
-        <div className="w-[300px] h-[380px] bg-[#dfe7dc] rounded-2xl shadow-xl flex items-center justify-center">
-          <span className="text-5xl font-serif text-[#6b8f62]">P</span>
-        </div>
+        <div className="w-[300px] h-[380px] rounded-2xl shadow-xl overflow-hidden">
+  <img
+    src="/pauli.png"
+    alt="Psicóloga Paulina Hernández"
+    className="w-full h-full object-cover"
+  />
+</div>
 
         {/* INFO PROFESIONAL */}
         <div className="text-center text-sm text-gray-600 space-y-1">
