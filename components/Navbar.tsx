@@ -47,9 +47,7 @@ export default function Navbar() {
             <a href="#servicios">Servicios</a>
             <a href="#sobre">Sobre mí</a>
             <a href="#investigacion">Investigación</a>
-            <a className="bg-[#4a6741] text-white px-5 py-2 rounded-md">
-              Reservar
-            </a>
+           
           </div>
 
           <button

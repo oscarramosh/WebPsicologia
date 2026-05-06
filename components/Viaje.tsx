@@ -14,12 +14,7 @@ export default function Viaje() {
         "Poco a poco, todo empieza a tener sentido. Nombrar lo que sientes ya es un avance.",
       video: "/videos/sunrise.mp4",
     },
-    {
-      titulo: "El cambio es posible",
-      texto:
-        "Cuando te comprendes, puedes transformar tu forma de vivir y relacionarte contigo.",
-      video: "/videos/forest.mp4",
-    },
+   
   ];
 
   return (
