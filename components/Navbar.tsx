@@ -33,32 +33,28 @@ export default function Navbar() {
     >
       <div className="relative w-full h-[120px]">
 
-        {/* ✅ TU FOTO COMO BANNER */}
+        {/* ✅ IMAGEN ORIGINAL (SIN RECORTE) */}
         <img
-          src="/pauli.jpeg"
+          src="/banner-cropped.png"
           alt="La Ruta de una Psicóloga"
-          className="w-full h-full block opacity-80"
+          className="w-full h-full block opacity-75"
         />
 
-        {/* 🔥 OVERLAY SUAVE PARA LEGIBILIDAD */}
-        <div className="absolute inset-0 bg-white/30"></div>
+        {/* ✅ OVERLAY SUAVE */}
+        <div className="absolute inset-0 bg-white/25"></div>
 
         {/* MENÚ */}
         <div className="absolute inset-0 flex items-center justify-end px-6 md:px-10">
           <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-[#2F3A3F]">
-            
             <a href="#servicios" className="hover:text-[#3E5C50] transition">
               Servicios
             </a>
-
             <a href="#sobre" className="hover:text-[#3E5C50] transition">
               Sobre mí
             </a>
-
             <a href="#investigacion" className="hover:text-[#3E5C50] transition">
               Investigación
             </a>
-
           </div>
 
           <button
