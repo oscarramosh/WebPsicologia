@@ -40,8 +40,8 @@ export default function Navbar() {
           className="w-full h-full block"
         />
 
-        {/* 🔥 SOMBRA INTERNA (CLAVE REAL) */}
-        <div className="absolute inset-0 shadow-[inset_0_-30px_40px_-10px_rgba(47,58,63,0.4)] pointer-events-none"></div>
+        {/* 🔥 DEGRADADO ULTRA SUAVE (ESTE ES EL BUENO) */}
+        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-b from-transparent to-[#2F3A3F]/25 pointer-events-none"></div>
 
         {/* OVERLAY MUY SUAVE */}
         <div className="absolute inset-0 bg-white/10"></div>
