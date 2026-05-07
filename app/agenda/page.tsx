@@ -11,11 +11,11 @@ export default function Agenda() {
         {/* 🔙 VOLVER */}
         <div className="mb-6">
           <Link
-            href="/"
-            className="text-sm text-[#4a6741] hover:opacity-70 transition"
-          >
-            ← Volver al inicio
-          </Link>
+  href="/"
+  className="fixed top-6 left-6 z-50 bg-white/90 backdrop-blur px-4 py-2 rounded-full text-sm text-[#4a6741] shadow-md hover:shadow-lg transition"
+>
+  ← Volver
+</Link>
         </div>
 
         {/* HEADER */}
