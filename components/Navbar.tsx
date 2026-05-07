@@ -40,24 +40,28 @@ export default function Navbar() {
           className="w-full h-full block"
         />
 
-        {/* 🔥 DIFUMINADO REAL (RADIAL - ESTE SÍ FUNCIONA) */}
+        {/* DIFUMINADO */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(47,58,63,0.35),transparent_70%)] pointer-events-none"></div>
 
-        {/* OVERLAY SUAVE */}
+        {/* OVERLAY */}
         <div className="absolute inset-0 bg-white/10"></div>
 
         {/* MENÚ */}
         <div className="absolute inset-0 flex items-center justify-end px-6 md:px-10">
           <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
-            <a href="#servicios" className="hover:text-[#EAEAEA] transition">
+
+            <a href="/#servicios" className="hover:text-[#EAEAEA] transition">
               Servicios
             </a>
-            <a href="#sobre" className="hover:text-[#EAEAEA] transition">
+
+            <a href="/#sobre" className="hover:text-[#EAEAEA] transition">
               Sobre mí
             </a>
-            <a href="#investigacion" className="hover:text-[#EAEAEA] transition">
+
+            <a href="/#investigacion" className="hover:text-[#EAEAEA] transition">
               Reflexiones
             </a>
+
           </div>
 
           <button
@@ -72,12 +76,27 @@ export default function Navbar() {
       {/* MOBILE */}
       {open && (
         <div className="md:hidden bg-white border-t p-6 flex flex-col gap-4 text-sm shadow-md">
-          <a onClick={() => setOpen(false)}>Servicios</a>
-          <a onClick={() => setOpen(false)}>Sobre mí</a>
-          <a onClick={() => setOpen(false)}>Reflexiones</a>
-          <a className="bg-[#3E5C50] text-white px-4 py-2 rounded text-center">
+
+          <a href="/#servicios" onClick={() => setOpen(false)}>
+            Servicios
+          </a>
+
+          <a href="/#sobre" onClick={() => setOpen(false)}>
+            Sobre mí
+          </a>
+
+          <a href="/#investigacion" onClick={() => setOpen(false)}>
+            Reflexiones
+          </a>
+
+          <a
+            href="/agenda"
+            onClick={() => setOpen(false)}
+            className="bg-[#3E5C50] text-white px-4 py-2 rounded text-center"
+          >
             Reservar
           </a>
+
         </div>
       )}
     </nav>
