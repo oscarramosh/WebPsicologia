@@ -31,51 +31,47 @@ export default function Navbar() {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="relative w-full h-[120px]">
+      {/* 🔥 ALTURA RESPONSIVE */}
+      <div className="relative w-full h-[80px] md:h-[120px]">
 
         {/* IMAGEN */}
         <img
           src="/banner-cropped.png"
           alt="La Ruta de una Psicóloga"
-          className="w-full h-full block"
+          className="w-full h-full object-cover"
         />
-
-        {/* DIFUMINADO */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(47,58,63,0.35),transparent_70%)] pointer-events-none"></div>
 
         {/* OVERLAY */}
         <div className="absolute inset-0 bg-white/10"></div>
 
         {/* MENÚ */}
-        <div className="absolute inset-0 flex items-center justify-end px-6 md:px-10">
-          <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
+        <div className="absolute inset-0 flex items-center justify-between px-4 md:px-10">
 
-            <a href="/#servicios" className="hover:text-[#EAEAEA] transition">
-              Servicios
-            </a>
-
-            <a href="/#sobre" className="hover:text-[#EAEAEA] transition">
-              Sobre mí
-            </a>
-
-            <a href="/#investigacion" className="hover:text-[#EAEAEA] transition">
-              Reflexiones
-            </a>
-
+          {/* LOGO TEXTO OPCIONAL (mobile mejora UX) */}
+          <div className="md:hidden text-sm text-white font-medium">
+            Paulina
           </div>
 
+          {/* LINKS DESKTOP */}
+          <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-white">
+            <a href="/#servicios">Servicios</a>
+            <a href="/#sobre">Sobre mí</a>
+            <a href="/#investigacion">Reflexiones</a>
+          </div>
+
+          {/* BOTÓN MOBILE */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden text-2xl text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]"
+            className="md:hidden text-2xl text-white"
           >
             ☰
           </button>
         </div>
       </div>
 
-      {/* MOBILE */}
+      {/* MOBILE MENU */}
       {open && (
-        <div className="md:hidden bg-white border-t p-6 flex flex-col gap-4 text-sm shadow-md">
+        <div className="md:hidden bg-white shadow-lg p-6 flex flex-col gap-5 text-sm">
 
           <a href="/#servicios" onClick={() => setOpen(false)}>
             Servicios
@@ -92,11 +88,10 @@ export default function Navbar() {
           <a
             href="/agenda"
             onClick={() => setOpen(false)}
-            className="bg-[#3E5C50] text-white px-4 py-2 rounded text-center"
+            className="bg-[#3E5C50] text-white px-4 py-3 rounded-md text-center"
           >
-            Reservar
+            Reservar sesión
           </a>
-
         </div>
       )}
     </nav>
