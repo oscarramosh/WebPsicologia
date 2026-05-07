@@ -40,11 +40,11 @@ export default function Navbar() {
           className="w-full h-full block opacity-90"
         />
 
-        {/* OVERLAY MUY SUAVE */}
+        {/* OVERLAY SUAVE */}
         <div className="absolute inset-0 bg-white/10"></div>
 
-        {/* 🔥 DIFUMINADO REAL (SUAVE, SIN BLOQUE) */}
-        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-b from-transparent to-[#2F3A3F]/20 pointer-events-none"></div>
+        {/* 🔥 DEGRADADO SUAVE REAL (VISIBLE PERO NATURAL) */}
+        <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-b from-transparent via-transparent to-black/20 pointer-events-none"></div>
 
         {/* MENÚ */}
         <div className="absolute inset-0 flex items-center justify-end px-6 md:px-10">
