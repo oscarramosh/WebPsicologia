@@ -4,23 +4,17 @@ export default function Servicios() {
       icon: "🧠",
       title: "Psicoterapia Individual",
       desc: "Un espacio para comprender lo que te ocurre, ordenar lo que sientes y avanzar a tu propio ritmo.",
-     
     },
     {
       icon: "💭",
       title: "Psicoterapia Infanto Juvenil",
       desc: "Acompañamiento especializado para niños y adolescentes que enfrentan ansiedad, desregulación emocional o dificultades en su entorno.",
-     
     },
     {
       icon: "🌿",
       title: "Psicoterapia Adulto",
       desc: "Acompañamiento en procesos como pérdidas, separaciones, crisis personales o momentos difíciles de la vida.",
-      
     },
-    
-    
-   
   ];
 
   return (
@@ -28,14 +22,15 @@ export default function Servicios() {
       
       {/* TÍTULO */}
       <div className="mb-12">
-        <p className="uppercase text-xs tracking-[0.2em] text-green-700 mb-2">
+        
+        {/* 🔥 MÁS GRANDE Y CON JERARQUÍA */}
+        <h2 className="text-3xl md:text-4xl font-serif text-[#2F3A3F] mb-3">
           Psicología Online
-        </p>
+        </h2>
 
-  
-
+        {/* 🔥 TEXTO MEJORADO */}
         <p className="text-gray-500 max-w-xl">
-          Un espacio terapéutico seguro, confidencial y adaptado a tus necesidades.
+          Acompañamiento terapéutico online, cercano y confidencial, orientado a tu bienestar emocional.
         </p>
       </div>
 
@@ -61,7 +56,6 @@ export default function Servicios() {
               {s.desc}
             </p>
 
-           
           </div>
         ))}
       </div>
