@@ -14,14 +14,14 @@ export default function Hero() {
             Psicóloga Clínica · Chile · Online
           </p>
 
-          <h1 className="text-4xl md:text-5xl font-serif leading-tight mb-4">
+          <h1 className="text-3xl md:text-4xl font-serif leading-snug mb-4">
             Acompañamiento psicológico para
-            <span className="italic block text-[#8A9A9D]">
+            <span className="italic block text-[#8A9A9D] text-[0.95em]">
               ansiedad, depresión y procesos personales
             </span>
           </h1>
 
-          <p className="mb-6 text-sm md:text-base opacity-90">
+          <p className="mb-6 text-sm md:text-[15px] opacity-90">
             Un espacio terapéutico profesional, cercano y confidencial,
             donde puedes comprender lo que te ocurre y avanzar a tu propio ritmo.
           </p>
@@ -46,14 +46,29 @@ export default function Hero() {
       </div>
 
       {/* DERECHA */}
-      <div className="bg-[#F7F5F0] flex items-center justify-center px-6 py-12">
+      <div className="bg-[#F7F5F0] flex flex-col items-center justify-center gap-5 px-6 py-12">
 
+        {/* FOTO */}
         <div className="w-[260px] h-[340px] rounded-2xl shadow-xl overflow-hidden">
           <img
             src="/pauli.jpeg"
             alt="Psicóloga Paulina Hernández"
             className="w-full h-full object-cover"
           />
+        </div>
+
+        {/* TEXTO */}
+        <div className="text-center text-[13px] text-gray-600 space-y-2 max-w-[300px]">
+
+          <h2 className="text-xl font-serif">
+            Hola, soy <span className="italic text-[#3E5C50]">Paulina</span>
+          </h2>
+
+          <p className="leading-relaxed">
+            Psicóloga clínica enfocada en procesos de ansiedad,
+            bienestar emocional y desarrollo personal.
+          </p>
+
         </div>
 
       </div>
