@@ -31,21 +31,17 @@ export default function Navbar() {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      {/* 🔥 MISMA ALTURA QUE YA TENÍAS */}
       <div className="relative w-full h-[120px]">
 
-        {/* IMAGEN (FIX REAL) */}
+        {/* ✅ IMAGEN SIN RECORTE */}
         <img
           src="/banner-cropped.png"
           alt="La Ruta de una Psicóloga"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
         />
 
         {/* DIFUMINADO */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(47,58,63,0.35),transparent_70%)] pointer-events-none"></div>
-
-        {/* OVERLAY */}
-        <div className="absolute inset-0 bg-white/10"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(47,58,63,0.25),transparent_70%)] pointer-events-none"></div>
 
         {/* MENÚ */}
         <div className="absolute inset-0 flex items-center justify-end px-4 md:px-10">
@@ -57,19 +53,19 @@ export default function Navbar() {
             <a href="/#investigacion">Reflexiones</a>
           </div>
 
-          {/* MOBILE BTN */}
+          {/* MOBILE BTN MÁS GRANDE */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden text-2xl text-white"
+            className="md:hidden text-3xl text-white"
           >
             ☰
           </button>
         </div>
       </div>
 
-      {/* MOBILE MENU */}
+      {/* MOBILE MENU MEJORADO */}
       {open && (
-        <div className="md:hidden bg-white border-t p-6 flex flex-col gap-4 text-sm shadow-md">
+        <div className="md:hidden bg-white border-t p-6 flex flex-col gap-6 text-base shadow-md">
 
           <a href="/#servicios" onClick={() => setOpen(false)}>
             Servicios
@@ -86,9 +82,9 @@ export default function Navbar() {
           <a
             href="/agenda"
             onClick={() => setOpen(false)}
-            className="bg-[#3E5C50] text-white px-4 py-2 rounded text-center"
+            className="bg-[#3E5C50] text-white px-4 py-3 rounded-md text-center"
           >
-            Reservar
+            Reservar sesión
           </a>
 
         </div>
