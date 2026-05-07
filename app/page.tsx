@@ -13,6 +13,7 @@ import Testimonios from "../components/Testimonios";
 import BlogPreview from "../components/BlogPreview";
 import FAQ from "../components/FAQ";
 import Identificacion from "../components/Identificacion";
+import VideoSecundario from "../components/VideoSecundario";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Viaje />
       <Identificacion />
       <Servicios />
+      <VideoSecundario />
       <FAQ />
       <Frases />
       <Estudios />

@@ -7,13 +7,7 @@ export default function Viaje() {
       texto:
         "La ansiedad no siempre se ve, pero se siente en cada pensamiento que no descansa.",
       video: "/videos/ocean.mp4",
-    },
-    {
-      titulo: "Comienzas a entenderte",
-      texto:
-        "Poco a poco, todo empieza a tener sentido. Nombrar lo que sientes ya es un avance.",
-      video: "/videos/sunrise.mp4",
-    },
+    }
    
   ];
 

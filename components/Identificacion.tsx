@@ -4,7 +4,7 @@ export default function Identificacion() {
 
       <div className="max-w-5xl mx-auto text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-serif mb-4">
-          ¿Te está pasando algo de esto?
+          ¿Te sientes identificado con esto?
         </h2>
 
         <p className="text-gray-500 max-w-xl mx-auto">
