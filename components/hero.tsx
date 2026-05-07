@@ -2,11 +2,11 @@ export default function Hero() {
   return (
     <section className="relative grid md:grid-cols-2 min-h-screen pt-[120px]">
 
-      {/* 🔥 DIFUMINADO SUPERIOR (CLAVE) */}
-      <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-[#2F3A3F]/40 to-transparent pointer-events-none"></div>
+      {/* 🔥 DEGRADADO CORRECTO (AHORA SÍ SE VE) */}
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#2F3A3F]/50 to-transparent pointer-events-none z-40"></div>
 
       {/* IZQUIERDA */}
-      <div className="bg-[#2F3A3F] text-white flex flex-col justify-center px-10 md:px-16 py-16">
+      <div className="bg-[#2F3A3F] text-white flex flex-col justify-center px-10 md:px-16 py-16 relative z-0">
 
         <p className="uppercase tracking-[0.25em] text-xs opacity-60 mb-5">
           Psicóloga Clínica · Chile · Online
@@ -47,7 +47,7 @@ export default function Hero() {
       </div>
 
       {/* DERECHA */}
-      <div className="bg-[#F7F5F0] flex flex-col items-center justify-center gap-6 px-6">
+      <div className="bg-[#F7F5F0] flex flex-col items-center justify-center gap-6 px-6 relative z-0">
 
         <div className="w-[280px] h-[360px] rounded-2xl shadow-xl overflow-hidden">
           <img
