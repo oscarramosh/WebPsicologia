@@ -33,10 +33,10 @@ export default function Navbar() {
     >
       <div className="relative w-full h-[90px] md:h-[120px]">
 
-        {/* 🔥 FONDO MOBILE MÁS CLARO */}
-        <div className="absolute inset-0 bg-[#3E5C50] md:hidden"></div>
+        {/* 🔥 FONDO MOBILE CREMA */}
+        <div className="absolute inset-0 bg-[#f7f5f0] md:hidden"></div>
 
-        {/* IMAGEN SOLO DESKTOP */}
+        {/* IMAGEN DESKTOP */}
         <img
           src="/banner-cropped.png"
           alt="La Ruta de una Psicóloga"
@@ -49,30 +49,28 @@ export default function Navbar() {
         {/* CONTENIDO */}
         <div className="absolute inset-0 flex items-center justify-between px-4 md:px-10">
 
-          {/* 🔥 TÍTULO MOBILE */}
-          <div className="flex items-center gap-2 md:hidden text-white">
+          {/* MOBILE TITLE */}
+          <div className="flex items-center gap-2 md:hidden text-[#2F3A3F]">
 
-            {/* 🦋 ICONO */}
             <span className="text-xl">🦋</span>
 
-            {/* TEXTO */}
-            <span className="text-sm font-medium tracking-wide">
+            <span className="text-base font-medium tracking-wide">
               La Ruta de una Psicóloga
             </span>
 
           </div>
 
-          {/* DESKTOP MENU */}
-          <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
+          {/* DESKTOP MENU (DERECHA CORRECTO) */}
+          <div className="hidden md:flex items-center gap-8 ml-auto text-xs uppercase tracking-widest text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
             <a href="/#servicios">Servicios</a>
             <a href="/#sobre">Sobre mí</a>
             <a href="/#investigacion">Reflexiones</a>
           </div>
 
-          {/* BOTÓN MOBILE */}
+          {/* MOBILE BTN */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden text-4xl text-white"
+            className="md:hidden text-4xl text-[#2F3A3F]"
           >
             ☰
           </button>
@@ -81,7 +79,7 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       {open && (
-        <div className="md:hidden bg-white border-t p-6 flex flex-col gap-5 text-base shadow-md">
+        <div className="md:hidden bg-[#f7f5f0] border-t p-6 flex flex-col gap-6 text-lg shadow-md text-[#2F3A3F]">
 
           <a href="/#servicios" onClick={() => setOpen(false)}>
             Servicios
@@ -98,7 +96,7 @@ export default function Navbar() {
           <a
             href="/agenda"
             onClick={() => setOpen(false)}
-            className="bg-[#3E5C50] text-white px-4 py-3 rounded-md text-center"
+            className="bg-[#3E5C50] text-white px-4 py-3 rounded-md text-center text-base"
           >
             Reservar sesión
           </a>
