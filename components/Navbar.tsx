@@ -40,10 +40,10 @@ export default function Navbar() {
           className="w-full h-full block"
         />
 
-        {/* 🔥 DEGRADADO ULTRA SUAVE (ESTE ES EL BUENO) */}
-        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-b from-transparent to-[#2F3A3F]/25 pointer-events-none"></div>
+        {/* 🔥 DIFUMINADO REAL (RADIAL - ESTE SÍ FUNCIONA) */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(47,58,63,0.35),transparent_70%)] pointer-events-none"></div>
 
-        {/* OVERLAY MUY SUAVE */}
+        {/* OVERLAY SUAVE */}
         <div className="absolute inset-0 bg-white/10"></div>
 
         {/* MENÚ */}
