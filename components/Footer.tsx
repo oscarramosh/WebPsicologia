@@ -1,3 +1,7 @@
+"use client";
+
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="bg-[#f4f2ec] border-t border-[#e0ddd6] mt-20">
@@ -7,33 +11,34 @@ export default function Footer() {
         {/* NAVEGACIÓN */}
         <nav className="flex flex-wrap justify-center gap-8 text-sm text-gray-600 mb-8">
 
-          <a
+          <Link
             href="#servicios"
             className="hover:text-[#6b8f62] transition"
           >
             Servicios
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="#sobre"
             className="hover:text-[#6b8f62] transition"
           >
             Sobre mí
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="/blog"
             className="hover:text-[#6b8f62] transition"
           >
             Blog
-          </a>
+          </Link>
 
-          <a
-            href="#reserva"
+          {/* 🔥 CORREGIDO */}
+          <Link
+            href="/agenda"
             className="hover:text-[#6b8f62] transition"
           >
             Agenda
-          </a>
+          </Link>
 
         </nav>
 
