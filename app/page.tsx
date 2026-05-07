@@ -12,6 +12,7 @@ import Viaje from "../components/Viaje";
 import Testimonios from "../components/Testimonios";
 import BlogPreview from "../components/BlogPreview";
 import FAQ from "../components/FAQ";
+import Identificacion from "../components/Identificacion";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Viaje />
+      <Identificacion />
       <Servicios />
       <FAQ />
       <Frases />
