@@ -44,12 +44,10 @@ export default function Servicios() {
       {/* TÍTULO */}
       <div className="mb-12">
         <p className="uppercase text-xs tracking-[0.2em] text-green-700 mb-2">
-          Servicios
+          Psicología Online
         </p>
 
-        <h2 className="text-4xl font-serif mb-4">
-          Lo que ofrezco
-        </h2>
+  
 
         <p className="text-gray-500 max-w-xl">
           Un espacio terapéutico seguro, confidencial y adaptado a tus necesidades.

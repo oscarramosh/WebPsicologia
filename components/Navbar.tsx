@@ -56,7 +56,7 @@ export default function Navbar() {
               Sobre mí
             </a>
             <a href="#investigacion" className="hover:text-[#EAEAEA] transition">
-              Investigación
+              Reflexiones
             </a>
           </div>
 
@@ -74,7 +74,7 @@ export default function Navbar() {
         <div className="md:hidden bg-white border-t p-6 flex flex-col gap-4 text-sm shadow-md">
           <a onClick={() => setOpen(false)}>Servicios</a>
           <a onClick={() => setOpen(false)}>Sobre mí</a>
-          <a onClick={() => setOpen(false)}>Investigación</a>
+          <a onClick={() => setOpen(false)}>Reflexiones</a>
           <a className="bg-[#3E5C50] text-white px-4 py-2 rounded text-center">
             Reservar
           </a>
