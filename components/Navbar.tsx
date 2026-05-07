@@ -31,16 +31,17 @@ export default function Navbar() {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="relative w-full h-[120px]">
+      {/* 🔥 ALTURA AJUSTADA PARA MOBILE */}
+      <div className="relative w-full h-[100px] md:h-[120px]">
 
-        {/* ✅ IMAGEN SIN RECORTE */}
+        {/* ✅ IMAGEN SIN RECORTE NI ESCALADO RARO */}
         <img
           src="/banner-cropped.png"
           alt="La Ruta de una Psicóloga"
-          className="w-full h-full object-contain"
+          className="w-full h-full block"
         />
 
-        {/* DIFUMINADO */}
+        {/* DIFUMINADO SUAVE */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(47,58,63,0.25),transparent_70%)] pointer-events-none"></div>
 
         {/* MENÚ */}
@@ -53,7 +54,7 @@ export default function Navbar() {
             <a href="/#investigacion">Reflexiones</a>
           </div>
 
-          {/* MOBILE BTN MÁS GRANDE */}
+          {/* BOTÓN MOBILE */}
           <button
             onClick={() => setOpen(!open)}
             className="md:hidden text-3xl text-white"
@@ -63,9 +64,9 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* MOBILE MENU MEJORADO */}
+      {/* MOBILE MENU */}
       {open && (
-        <div className="md:hidden bg-white border-t p-6 flex flex-col gap-6 text-base shadow-md">
+        <div className="md:hidden bg-white border-t p-6 flex flex-col gap-5 text-base shadow-md">
 
           <a href="/#servicios" onClick={() => setOpen(false)}>
             Servicios
