@@ -1,28 +1,27 @@
 export default function Hero() {
   return (
-    <section className="grid md:grid-cols-2 min-h-screen pt-[120px]">
+    <section className="grid md:grid-cols-2 min-h-[80vh] pt-[120px]">
 
       {/* IZQUIERDA */}
-      <div className="relative flex flex-col justify-center px-10 md:px-16 py-16 text-white">
+      <div className="relative flex flex-col justify-center px-10 md:px-16 py-12 text-white">
 
-        {/* 🔥 FONDO CON TRANSICIÓN SUAVE (LA CLAVE REAL) */}
+        {/* FONDO SUAVE */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#2F3A3F]/85 to-[#2F3A3F]"></div>
 
-        {/* CONTENIDO */}
-        <div className="relative z-10">
+        <div className="relative z-10 max-w-lg">
 
-          <p className="uppercase tracking-[0.25em] text-xs opacity-60 mb-5">
+          <p className="uppercase tracking-[0.25em] text-xs opacity-60 mb-4">
             Psicóloga Clínica · Chile · Online
           </p>
 
-          <h1 className="text-4xl md:text-5xl font-serif leading-tight mb-5">
+          <h1 className="text-4xl md:text-5xl font-serif leading-tight mb-4">
             Acompañamiento psicológico para
             <span className="italic block text-[#8A9A9D]">
               ansiedad, depresión y procesos personales
             </span>
           </h1>
 
-          <p className="max-w-md mb-6 text-sm md:text-base opacity-90">
+          <p className="mb-6 text-sm md:text-base opacity-90">
             Un espacio terapéutico profesional, cercano y confidencial,
             donde puedes comprender lo que te ocurre y avanzar a tu propio ritmo.
           </p>
@@ -43,35 +42,18 @@ export default function Hero() {
             </a>
           </div>
 
-          <p className="text-xs opacity-60 mt-4">
-            Primera sesión online · Confidencial · Respuesta en menos de 24h
-          </p>
-
         </div>
       </div>
 
-      {/* DERECHA (NO SE TOCA) */}
-      <div className="bg-[#F7F5F0] flex flex-col items-center justify-center gap-6 px-6">
+      {/* DERECHA */}
+      <div className="bg-[#F7F5F0] flex items-center justify-center px-6 py-12">
 
-        <div className="w-[280px] h-[360px] rounded-2xl shadow-xl overflow-hidden">
+        <div className="w-[260px] h-[340px] rounded-2xl shadow-xl overflow-hidden">
           <img
             src="/pauli.jpeg"
             alt="Psicóloga Paulina Hernández"
             className="w-full h-full object-cover"
           />
-        </div>
-
-        <div className="text-center text-sm text-gray-600 space-y-3 max-w-[300px]">
-
-          <h2 className="text-2xl font-serif">
-            Hola, soy <span className="italic text-[#3E5C50]">Paulina</span>
-          </h2>
-
-          <p className="leading-relaxed">
-            Psicóloga clínica enfocada en procesos de ansiedad,
-            bienestar emocional y desarrollo personal.
-          </p>
-
         </div>
 
       </div>
