@@ -20,18 +20,27 @@ export default function Agenda() {
 
           <p className="text-gray-500 max-w-xl">
             Selecciona el día y la hora que mejor se adapten a ti.
-            El proceso es simple, confidencial y sin compromiso.
+            Un espacio profesional, confidencial y sin compromiso inicial.
           </p>
 
-          {/* 💰 PRECIO */}
-<div className="mt-6 inline-block bg-white border border-[#e5e3dc] px-6 py-3 rounded-lg shadow-sm">
-  <p className="text-sm text-gray-500">
-    Valor por sesión
-  </p>
-  <p className="text-xl font-serif text-[#2F3A3F]">
-    $30.000 CLP
-  </p>
-</div>
+          {/* 💰 PRECIO + DURACIÓN */}
+          <div className="mt-6 inline-block bg-white border border-[#e5e3dc] px-6 py-4 rounded-lg shadow-sm">
+            <p className="text-sm text-gray-500">
+              Valor por sesión
+            </p>
+            <p className="text-xl font-serif text-[#2F3A3F]">
+              $30.000 CLP
+            </p>
+            <p className="text-xs text-gray-400 mt-1">
+              Duración aproximada: 50 minutos
+            </p>
+          </div>
+
+          {/* 🧠 CONTEXTO (CLAVE CONVERSIÓN) */}
+          <p className="mt-6 text-sm text-gray-500 max-w-xl">
+            Si es tu primera vez, puedes usar este espacio para conversar, resolver dudas
+            y ver si este proceso es adecuado para ti.
+          </p>
         </div>
 
         {/* CALENDARIO */}
@@ -48,15 +57,21 @@ export default function Agenda() {
 
         </div>
 
-        {/* 🔙 VOLVER (AHORA ABAJO Y VISIBLE) */}
-      <div className="mt-10 text-center">
-  <Link
-    href="/"
-    className="inline-block bg-[#3E5C50] text-white px-6 py-3 rounded-md text-sm tracking-wide hover:bg-[#2F3A3F] transition"
-  >
-    ← Volver al inicio
-  </Link>
-</div>
+        {/* 💬 REFUERZO POST CALENDARIO */}
+        <div className="mt-10 text-center text-sm text-gray-500 max-w-md mx-auto">
+          Si no encuentras un horario adecuado o tienes dudas,
+          puedes escribirme directamente por WhatsApp.
+        </div>
+
+        {/* 🔙 VOLVER */}
+        <div className="mt-6 text-center">
+          <Link
+            href="/"
+            className="inline-block bg-[#3E5C50] text-white px-6 py-3 rounded-md text-sm tracking-wide hover:bg-[#2F3A3F] transition"
+          >
+            ← Volver al inicio
+          </Link>
+        </div>
 
       </div>
     </section>
