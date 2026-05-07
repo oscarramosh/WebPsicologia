@@ -1,8 +1,22 @@
+"use client";
+
+import Link from "next/link";
+
 export default function Agenda() {
   return (
     <section className="bg-[#fdfcf8] min-h-screen py-24 px-6 md:px-10">
 
       <div className="max-w-4xl mx-auto">
+
+        {/* 🔙 VOLVER */}
+        <div className="mb-6">
+          <Link
+            href="/"
+            className="text-sm text-[#4a6741] hover:opacity-70 transition"
+          >
+            ← Volver al inicio
+          </Link>
+        </div>
 
         {/* HEADER */}
         <div className="mb-12">
