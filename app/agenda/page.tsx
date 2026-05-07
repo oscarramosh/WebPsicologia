@@ -22,6 +22,16 @@ export default function Agenda() {
             Selecciona el día y la hora que mejor se adapten a ti.
             El proceso es simple, confidencial y sin compromiso.
           </p>
+
+          {/* 💰 PRECIO */}
+<div className="mt-6 inline-block bg-white border border-[#e5e3dc] px-6 py-3 rounded-lg shadow-sm">
+  <p className="text-sm text-gray-500">
+    Valor por sesión
+  </p>
+  <p className="text-xl font-serif text-[#2F3A3F]">
+    $30.000 CLP
+  </p>
+</div>
         </div>
 
         {/* CALENDARIO */}
