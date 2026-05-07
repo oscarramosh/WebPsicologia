@@ -3,20 +3,20 @@ export default function Servicios() {
     {
       icon: "🧠",
       title: "Psicoterapia Individual",
-      desc: "Proceso terapéutico personalizado para trabajar ansiedad, depresión y bienestar emocional.",
-      tag: "Presencial · Online",
+      desc: "Un espacio para comprender lo que te ocurre, ordenar lo que sientes y avanzar a tu propio ritmo.",
+     
     },
     {
       icon: "💭",
       title: "Psicoterapia Infanto Juvenil",
-      desc: "Intervención especializada en ansiedad, ataques de pánico y estrés.",
-      tag: "Programa estructurado",
+      desc: "Acompañamiento especializado para niños y adolescentes que enfrentan ansiedad, desregulación emocional o dificultades en su entorno.",
+     
     },
     {
       icon: "🌿",
       title: "Psicoterapia Adulto",
-      desc: "Acompañamiento en pérdidas, separaciones y procesos difíciles.",
-      tag: "Contención emocional",
+      desc: "Acompañamiento en procesos como pérdidas, separaciones, crisis personales o momentos difíciles de la vida.",
+      
     },
     
     
@@ -61,10 +61,7 @@ export default function Servicios() {
               {s.desc}
             </p>
 
-            {/* TAG */}
-            <span className="text-xs bg-green-50 text-green-700 px-3 py-1 rounded-full">
-              {s.tag}
-            </span>
+           
           </div>
         ))}
       </div>
