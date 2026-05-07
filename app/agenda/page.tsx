@@ -8,16 +8,6 @@ export default function Agenda() {
 
       <div className="max-w-4xl mx-auto">
 
-        {/* 🔙 VOLVER */}
-        <div className="mb-6">
-          <Link
-  href="/"
-  className="fixed top-6 left-6 z-50 bg-white/90 backdrop-blur px-4 py-2 rounded-full text-sm text-[#4a6741] shadow-md hover:shadow-lg transition"
->
-  ← Volver
-</Link>
-        </div>
-
         {/* HEADER */}
         <div className="mb-12">
           <p className="uppercase text-xs tracking-[0.2em] text-[#6b8f62] mb-3">
@@ -46,6 +36,16 @@ export default function Agenda() {
             />
           </div>
 
+        </div>
+
+        {/* 🔙 VOLVER (AHORA ABAJO Y VISIBLE) */}
+        <div className="mt-10 text-center">
+          <Link
+            href="/"
+            className="inline-block text-sm text-[#4a6741] hover:opacity-70 transition"
+          >
+            ← Volver al inicio
+          </Link>
         </div>
 
       </div>
