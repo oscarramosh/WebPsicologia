@@ -39,14 +39,14 @@ export default function Agenda() {
         </div>
 
         {/* 🔙 VOLVER (AHORA ABAJO Y VISIBLE) */}
-        <div className="mt-10 text-center">
-          <Link
-            href="/"
-            className="inline-block text-sm text-[#4a6741] hover:opacity-70 transition"
-          >
-            ← Volver al inicio
-          </Link>
-        </div>
+      <div className="mt-10 text-center">
+  <Link
+    href="/"
+    className="inline-block bg-[#3E5C50] text-white px-6 py-3 rounded-md text-sm tracking-wide hover:bg-[#2F3A3F] transition"
+  >
+    ← Volver al inicio
+  </Link>
+</div>
 
       </div>
     </section>
