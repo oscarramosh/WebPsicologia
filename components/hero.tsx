@@ -1,57 +1,53 @@
 export default function Hero() {
   return (
-    <section className="grid md:grid-cols-2 min-h-screen pt-[120px]">
+    <section className="relative grid md:grid-cols-2 min-h-screen pt-[120px]">
+
+      {/* 🔥 DEGRADADO CORRECTO (AHORA SÍ SE VE) */}
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#2F3A3F]/50 to-transparent pointer-events-none z-40"></div>
 
       {/* IZQUIERDA */}
-      <div className="relative text-white flex flex-col justify-center px-10 md:px-16 py-16">
+      <div className="bg-[#2F3A3F] text-white flex flex-col justify-center px-10 md:px-16 py-16 relative z-0">
 
-        {/* 🔥 FONDO CON TRANSICIÓN (ESTO SOLUCIONA TODO) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#2F3A3F]"></div>
+        <p className="uppercase tracking-[0.25em] text-xs opacity-60 mb-5">
+          Psicóloga Clínica · Chile · Online
+        </p>
 
-        {/* CONTENIDO */}
-        <div className="relative z-10">
+        <h1 className="text-4xl md:text-5xl font-serif leading-tight mb-5">
+          Acompañamiento psicológico para
+          <span className="italic block text-[#8A9A9D]">
+            ansiedad, depresión y procesos personales
+          </span>
+        </h1>
 
-          <p className="uppercase tracking-[0.25em] text-xs opacity-60 mb-5">
-            Psicóloga Clínica · Chile · Online
-          </p>
+        <p className="max-w-md mb-6 text-sm md:text-base opacity-90">
+          Un espacio terapéutico profesional, cercano y confidencial,
+          donde puedes comprender lo que te ocurre y avanzar a tu propio ritmo.
+        </p>
 
-          <h1 className="text-4xl md:text-5xl font-serif leading-tight mb-5">
-            Acompañamiento psicológico para
-            <span className="italic block text-[#8A9A9D]">
-              ansiedad, depresión y procesos personales
-            </span>
-          </h1>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <a
+            href="#reserva"
+            className="bg-[#3E5C50] text-white px-6 py-3 rounded-md text-sm tracking-wide hover:bg-[#2F3A3F] transition"
+          >
+            Reservar primera sesión
+          </a>
 
-          <p className="max-w-md mb-6 text-sm md:text-base opacity-90">
-            Un espacio terapéutico profesional, cercano y confidencial,
-            donde puedes comprender lo que te ocurre y avanzar a tu propio ritmo.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="#reserva"
-              className="bg-[#3E5C50] text-white px-6 py-3 rounded-md text-sm tracking-wide hover:bg-[#2F3A3F] transition"
-            >
-              Reservar primera sesión
-            </a>
-
-            <a
-              href="#servicios"
-              className="border border-white/30 px-6 py-3 rounded-md text-sm hover:bg-white/10 transition"
-            >
-              Ver servicios
-            </a>
-          </div>
-
-          <p className="text-xs opacity-60 mt-4">
-            Primera sesión online · Confidencial · Respuesta en menos de 24h
-          </p>
-
+          <a
+            href="#servicios"
+            className="border border-white/30 px-6 py-3 rounded-md text-sm hover:bg-white/10 transition"
+          >
+            Ver servicios
+          </a>
         </div>
+
+        <p className="text-xs opacity-60 mt-4">
+          Primera sesión online · Confidencial · Respuesta en menos de 24h
+        </p>
+
       </div>
 
       {/* DERECHA */}
-      <div className="bg-[#F7F5F0] flex flex-col items-center justify-center gap-6 px-6">
+      <div className="bg-[#F7F5F0] flex flex-col items-center justify-center gap-6 px-6 relative z-0">
 
         <div className="w-[280px] h-[360px] rounded-2xl shadow-xl overflow-hidden">
           <img

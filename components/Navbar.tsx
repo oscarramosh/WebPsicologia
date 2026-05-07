@@ -37,11 +37,14 @@ export default function Navbar() {
         <img
           src="/banner-cropped.png"
           alt="La Ruta de una Psicóloga"
-          className="w-full h-full block opacity-85"
+          className="w-full h-full block opacity-90"
         />
 
-        {/* OVERLAY SUAVE */}
-        <div className="absolute inset-0 bg-white/15"></div>
+        {/* OVERLAY MUY SUAVE */}
+        <div className="absolute inset-0 bg-white/10"></div>
+
+        {/* 🔥 DIFUMINADO REAL (SUAVE, SIN BLOQUE) */}
+        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-b from-transparent to-[#2F3A3F]/20 pointer-events-none"></div>
 
         {/* MENÚ */}
         <div className="absolute inset-0 flex items-center justify-end px-6 md:px-10">
