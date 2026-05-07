@@ -25,7 +25,7 @@ export default function Servicios() {
         
         {/* 🔥 MÁS GRANDE Y CON JERARQUÍA */}
         <h2 className="text-3xl md:text-4xl font-serif text-[#2F3A3F] mb-3">
-          Psicología Online
+          Psicología Online - Puedo ayudarte
         </h2>
 
         {/* 🔥 TEXTO MEJORADO */}
