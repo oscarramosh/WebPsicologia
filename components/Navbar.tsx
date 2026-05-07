@@ -31,18 +31,21 @@ export default function Navbar() {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      {/* 🔥 ALTURA AJUSTADA PARA MOBILE */}
-      <div className="relative w-full h-[100px] md:h-[120px]">
+      {/* 🔥 ALTURA RESPONSIVE */}
+      <div className="relative w-full h-[90px] md:h-[120px]">
 
-        {/* ✅ IMAGEN SIN RECORTE NI ESCALADO RARO */}
+        {/* ✅ FONDO SOLO MOBILE */}
+        <div className="absolute inset-0 bg-[#2F3A3F] md:hidden"></div>
+
+        {/* ✅ IMAGEN SOLO DESKTOP */}
         <img
           src="/banner-cropped.png"
           alt="La Ruta de una Psicóloga"
-          className="w-full h-full block"
+          className="hidden md:block w-full h-full"
         />
 
-        {/* DIFUMINADO SUAVE */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(47,58,63,0.25),transparent_70%)] pointer-events-none"></div>
+        {/* DIFUMINADO (solo desktop) */}
+        <div className="hidden md:block absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(47,58,63,0.25),transparent_70%)] pointer-events-none"></div>
 
         {/* MENÚ */}
         <div className="absolute inset-0 flex items-center justify-end px-4 md:px-10">
@@ -54,10 +57,10 @@ export default function Navbar() {
             <a href="/#investigacion">Reflexiones</a>
           </div>
 
-          {/* BOTÓN MOBILE */}
+          {/* MOBILE BTN MÁS GRANDE */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden text-3xl text-white"
+            className="md:hidden text-4xl text-white"
           >
             ☰
           </button>
