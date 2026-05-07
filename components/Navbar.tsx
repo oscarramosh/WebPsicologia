@@ -31,33 +31,45 @@ export default function Navbar() {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      {/* 🔥 ALTURA RESPONSIVE */}
       <div className="relative w-full h-[90px] md:h-[120px]">
 
-        {/* ✅ FONDO SOLO MOBILE */}
-        <div className="absolute inset-0 bg-[#2F3A3F] md:hidden"></div>
+        {/* 🔥 FONDO MOBILE MÁS CLARO */}
+        <div className="absolute inset-0 bg-[#3E5C50] md:hidden"></div>
 
-        {/* ✅ IMAGEN SOLO DESKTOP */}
+        {/* IMAGEN SOLO DESKTOP */}
         <img
           src="/banner-cropped.png"
           alt="La Ruta de una Psicóloga"
           className="hidden md:block w-full h-full"
         />
 
-        {/* DIFUMINADO (solo desktop) */}
+        {/* DIFUMINADO DESKTOP */}
         <div className="hidden md:block absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(47,58,63,0.25),transparent_70%)] pointer-events-none"></div>
 
-        {/* MENÚ */}
-        <div className="absolute inset-0 flex items-center justify-end px-4 md:px-10">
+        {/* CONTENIDO */}
+        <div className="absolute inset-0 flex items-center justify-between px-4 md:px-10">
 
-          {/* DESKTOP */}
+          {/* 🔥 TÍTULO MOBILE */}
+          <div className="flex items-center gap-2 md:hidden text-white">
+
+            {/* 🦋 ICONO */}
+            <span className="text-xl">🦋</span>
+
+            {/* TEXTO */}
+            <span className="text-sm font-medium tracking-wide">
+              La Ruta de una Psicóloga
+            </span>
+
+          </div>
+
+          {/* DESKTOP MENU */}
           <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
             <a href="/#servicios">Servicios</a>
             <a href="/#sobre">Sobre mí</a>
             <a href="/#investigacion">Reflexiones</a>
           </div>
 
-          {/* MOBILE BTN MÁS GRANDE */}
+          {/* BOTÓN MOBILE */}
           <button
             onClick={() => setOpen(!open)}
             className="md:hidden text-4xl text-white"
