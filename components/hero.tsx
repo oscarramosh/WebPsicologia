@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section className="grid md:grid-cols-2 min-h-[80vh] pt-[120px]">
@@ -27,12 +29,12 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="#reserva"
-              className="bg-[#3E5C50] text-white px-6 py-3 rounded-md text-sm tracking-wide hover:bg-[#2F3A3F] transition"
-            >
-              Reservar primera sesión
-            </a>
+            <Link
+  href="/agenda"
+  className="bg-[#3E5C50] text-white px-6 py-3 rounded-md text-sm tracking-wide hover:bg-[#2F3A3F] transition"
+>
+  Reservar primera sesión
+</Link>
 
             <a
               href="#servicios"
