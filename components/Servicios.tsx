@@ -8,34 +8,19 @@ export default function Servicios() {
     },
     {
       icon: "💭",
-      title: "Manejo de Ansiedad",
+      title: "Psicoterapia Infanto Juvenil",
       desc: "Intervención especializada en ansiedad, ataques de pánico y estrés.",
       tag: "Programa estructurado",
     },
     {
       icon: "🌿",
-      title: "Duelo y Crisis",
+      title: "Psicoterapia Adulto",
       desc: "Acompañamiento en pérdidas, separaciones y procesos difíciles.",
       tag: "Contención emocional",
     },
-    {
-      icon: "🔍",
-      title: "Autoconocimiento",
-      desc: "Exploración de patrones emocionales y crecimiento personal.",
-      tag: "Desarrollo personal",
-    },
-    {
-      icon: "🌙",
-      title: "Estrés y Burnout",
-      desc: "Herramientas para manejar el agotamiento emocional.",
-      tag: "Online disponible",
-    },
-    {
-      icon: "💬",
-      title: "Primera Consulta",
-      desc: "Evaluación inicial para definir tu proceso terapéutico.",
-      tag: "Inicio del proceso",
-    },
+    
+    
+   
   ];
 
   return (
