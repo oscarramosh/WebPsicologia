@@ -53,8 +53,8 @@ export default function Servicios() {
         ))}
       </div>
 
-      {/* 🔥 BLOQUE SEO (CLAVE) */}
-      <div className="max-w-3xl mx-auto">
+      {/* 🔥 BLOQUE SEO CORREGIDO */}
+      <div className="max-w-5xl">
         
 
         <p className="text-gray-600 leading-relaxed mb-4">
