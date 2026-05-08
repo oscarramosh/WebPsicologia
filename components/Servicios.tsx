@@ -56,9 +56,6 @@ export default function Servicios() {
       {/* 🔥 BLOQUE SEO (CLAVE) */}
       <div className="max-w-3xl mx-auto">
         
-        <h3 className="text-2xl md:text-3xl font-serif mb-6 text-[#2F3A3F]">
-          Psicóloga online en Chile
-        </h3>
 
         <p className="text-gray-600 leading-relaxed mb-4">
           La terapia psicológica online permite acceder a un proceso terapéutico profesional
