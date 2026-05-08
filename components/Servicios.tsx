@@ -22,43 +22,63 @@ export default function Servicios() {
       
       {/* TÍTULO */}
       <div className="mb-12">
-        
-        {/* 🔥 MÁS GRANDE Y CON JERARQUÍA */}
         <h2 className="text-3xl md:text-4xl font-serif text-[#2F3A3F] mb-3">
           Psicología Online - Puedo ayudarte
         </h2>
 
-        {/* 🔥 TEXTO MEJORADO */}
         <p className="text-gray-500 max-w-xl">
           Acompañamiento terapéutico online, cercano y confidencial, orientado a tu bienestar emocional.
         </p>
       </div>
 
       {/* GRID */}
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-3 gap-6 mb-20">
         {servicios.map((s, i) => (
           <div
             key={i}
             className="bg-white border border-[#e0ddd6] rounded-2xl p-8 hover:shadow-xl hover:-translate-y-1 transition duration-300"
           >
-            {/* ICONO */}
             <div className="w-12 h-12 rounded-lg bg-[#eef2ed] text-[#6b8f62] flex items-center justify-center text-2xl mb-6 transition hover:bg-[#e8ede6]">
               {s.icon}
             </div>
 
-            {/* TITULO */}
             <h3 className="text-xl font-serif mb-3">
               {s.title}
             </h3>
 
-            {/* DESCRIPCIÓN */}
             <p className="text-gray-500 text-sm mb-4 leading-relaxed">
               {s.desc}
             </p>
-
           </div>
         ))}
       </div>
+
+      {/* 🔥 BLOQUE SEO (CLAVE) */}
+      <div className="max-w-3xl mx-auto">
+        
+        <h3 className="text-2xl md:text-3xl font-serif mb-6 text-[#2F3A3F]">
+          Psicóloga online en Chile
+        </h3>
+
+        <p className="text-gray-600 leading-relaxed mb-4">
+          La terapia psicológica online permite acceder a un proceso terapéutico profesional
+          desde la comodidad de tu espacio. Trabajo acompañando procesos de ansiedad, depresión
+          y bienestar emocional desde un enfoque cercano, ético y confidencial.
+        </p>
+
+        <p className="text-gray-600 leading-relaxed mb-4">
+          Si estás atravesando momentos de angustia, pensamientos constantes o dificultades
+          emocionales, la terapia puede ser un espacio para comprender lo que te ocurre y
+          comenzar a sentirte mejor.
+        </p>
+
+        <p className="text-gray-600 leading-relaxed">
+          Atiendo de forma online a personas en Chile, ofreciendo un acompañamiento
+          personalizado adaptado a cada proceso.
+        </p>
+
+      </div>
+
     </section>
   );
 }
