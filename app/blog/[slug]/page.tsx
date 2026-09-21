@@ -1,5 +1,42 @@
 import { posts } from "../../../lib/posts";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+function excerpt(content: string, maxLength = 155): string {
+  const firstLine = content
+    .split("\n")
+    .map((line) => line.trim())
+    .find((line) => line.length > 0 && !line.startsWith("-"));
+  const text = firstLine ?? content.trim();
+  return text.length > maxLength ? text.slice(0, maxLength - 1).trimEnd() + "…" : text;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = posts.find((p) => p.slug === slug);
+  if (!post) return {};
+
+  const description = excerpt(post.content);
+  const url = `https://larutadeunapsicologa.com/blog/${post.slug}`;
+
+  return {
+    title: `${post.title} | La Ruta de una Psicóloga`,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: post.title,
+      description,
+      url,
+      siteName: "La Ruta de una Psicóloga",
+      locale: "es_CL",
+      type: "article",
+    },
+  };
+}
 
 export default async function Post({
   params,

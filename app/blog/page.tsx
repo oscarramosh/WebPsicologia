@@ -1,5 +1,22 @@
 import { posts } from "../../lib/posts";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog | La Ruta de una Psicóloga",
+  description:
+    "Reflexiones sobre ansiedad, terapia y bienestar emocional — un espacio para comprender procesos terapéuticos y preguntas frecuentes sobre salud mental.",
+  alternates: { canonical: "https://larutadeunapsicologa.com/blog" },
+  openGraph: {
+    title: "Blog | La Ruta de una Psicóloga",
+    description:
+      "Reflexiones sobre ansiedad, terapia y bienestar emocional.",
+    url: "https://larutadeunapsicologa.com/blog",
+    siteName: "La Ruta de una Psicóloga",
+    locale: "es_CL",
+    type: "website",
+  },
+};
 
 export default function Blog() {
   return (
