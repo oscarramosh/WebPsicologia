@@ -73,7 +73,7 @@ export default function Reserva() {
                 </a>
 
                 <a
-                  href="https://www.instagram.com/psico.paulinahernandez?stkn=ZXQ2dGxrOXJpcnRh"
+                  href="https://www.instagram.com/psico.paulinahernandez/"
                   target="_blank"
                   className="flex items-center gap-3 hover:text-[#6b8f62] transition"
                 >
