@@ -70,8 +70,8 @@ export default function Servicios() {
         </p>
 
         <p className="text-gray-600 leading-relaxed">
-          Atiendo de forma online a personas en Chile, ofreciendo un acompañamiento
-          personalizado adaptado a cada proceso.
+          Atiendo de forma online a personas en Santiago y en todo Chile, ofreciendo un
+          acompañamiento personalizado adaptado a cada proceso.
         </p>
 
       </div>

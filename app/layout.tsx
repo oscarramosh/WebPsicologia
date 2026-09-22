@@ -34,10 +34,37 @@ export const metadata = {
   },
 };
 
+// Sin dirección física: la atención es 100% online en todo Chile, así que no declaramos un
+// LocalBusiness con domicilio (sería falso) — ProfessionalService + areaServed es el tipo
+// correcto para un servicio remoto dirigido a un país/ciudad, sin inventar una ubicación.
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "La Ruta de una Psicóloga — Paulina Hernández",
+  description:
+    "Psicóloga clínica online en Chile. Acompañamiento en ansiedad, depresión y bienestar emocional.",
+  url: "https://larutadeunapsicologa.com",
+  image: "https://larutadeunapsicologa.com/pauli.jpeg",
+  areaServed: [
+    { "@type": "Country", name: "Chile" },
+    { "@type": "City", name: "Santiago" },
+  ],
+  serviceType: "Psicoterapia online",
+  provider: {
+    "@type": "Person",
+    name: "Paulina Hernández",
+    jobTitle: "Psicóloga clínica",
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         <Navbar />
         {children}
 

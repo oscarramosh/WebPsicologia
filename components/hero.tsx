@@ -17,7 +17,7 @@ export default function Hero() {
           </p>
 
           <h1 className="text-3xl md:text-4xl font-serif leading-snug mb-4">
-            Acompañamiento psicológico para
+            Psicóloga online en Chile para
             <span className="italic block text-[#8A9A9D] text-[0.95em]">
               ansiedad, depresión y procesos personales
             </span>
