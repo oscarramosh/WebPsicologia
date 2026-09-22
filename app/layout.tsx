@@ -45,6 +45,7 @@ const structuredData = {
     "Psicóloga clínica online en Chile. Acompañamiento en ansiedad, depresión y bienestar emocional.",
   url: "https://larutadeunapsicologa.com",
   image: "https://larutadeunapsicologa.com/pauli.jpeg",
+  sameAs: ["https://youtube.com/@larutadeunapsicologa"],
   areaServed: [
     { "@type": "Country", name: "Chile" },
     { "@type": "City", name: "Santiago" },

@@ -40,6 +40,15 @@ export default function Footer() {
             Agenda
           </Link>
 
+          <a
+            href="https://youtube.com/@larutadeunapsicologa"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#6b8f62] transition"
+          >
+            YouTube
+          </a>
+
         </nav>
 
         {/* LÍNEA DECORATIVA */}
