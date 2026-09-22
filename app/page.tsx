@@ -14,6 +14,7 @@ import BlogPreview from "../components/BlogPreview";
 import FAQ from "../components/FAQ";
 import Identificacion from "../components/Identificacion";
 import VideoSecundario from "../components/VideoSecundario";
+import Mentesys from "../components/Mentesys";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <FAQ />
       <Frases />
       <Estudios />
+      <Mentesys />
       <Quote />
       <Testimonios />
       <Reserva />
