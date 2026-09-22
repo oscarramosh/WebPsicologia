@@ -1,6 +1,6 @@
 "use client";
 
-import { FaWhatsapp, FaEnvelope, FaInstagram } from "react-icons/fa";
+import { FaWhatsapp, FaEnvelope, FaInstagram, FaYoutube } from "react-icons/fa";
 
 export default function Reserva() {
   return (
@@ -79,6 +79,15 @@ export default function Reserva() {
                 >
                   <FaInstagram className="text-pink-500 text-base" />
                   <span>Instagram</span>
+                </a>
+
+                <a
+                  href="https://youtube.com/@larutadeunapsicologa"
+                  target="_blank"
+                  className="flex items-center gap-3 hover:text-[#6b8f62] transition"
+                >
+                  <FaYoutube className="text-red-600 text-base" />
+                  <span>YouTube</span>
                 </a>
 
               </div>
